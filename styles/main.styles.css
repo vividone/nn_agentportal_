@@ -75,19 +75,11 @@ nav {
 
 /* SIDEBAR */
 
-.sidebar {
-  margin-right: 2.4rem;
-  /* position: fixed;
-  top: 135px; */
-}
-
 .box {
   background-color: #fff;
   border-top: 2px solid var(--yellow);
   border-bottom-right-radius: 1.5rem;
   padding: 20px;
-  width: 100%;
-  /* max-width: 20rem; */
 }
 
 .sidebar__main > div {
@@ -99,16 +91,9 @@ nav {
   font-weight: bold;
 }
 
-.board {
-  max-width: 78%;
-  /* position: relative;
-  left: 350px;
-  margin-inline: auto; */
-}
-
 .box-content > h1 {
-  font-weight: bold;
-  font-size: 5rem;
+  font-weight: 500;
+  font-size: 3rem;
 }
 
 .box-content > article {
@@ -133,32 +118,6 @@ nav {
 }
 
 /* TRANSACTION BOS */
-
-.transaction__box {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-}
-
-.transaction__box-2 {
-  gap: 25px;
-}
-
-.transaction__box-performance {
-  grid-column: 1/4;
-}
-
-.transaction__box-chart {
-  grid-column: 4/5;
-}
-
-.transaction__box-zonal {
-  flex: 0.5;
-}
-
-.transaction__box-trans {
-  flex: 0.5;
-}
 
 .transaction__icon {
   padding: 10px;
