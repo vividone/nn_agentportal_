@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+
+    <link
+      rel="stylesheet"
+      href="assets/vendors/bootstrap/css/bootstrap.min.css"
+    />
+
+    <!-- DATERANGEPICKER -->
+    <link
+      rel="stylesheet"
+      href="assets/vendors/daterangepicker/daterangepicker.css"
+    />
+
+    <!-- DATABASE TABLE -->
+    <link
+      href="assets/vendors/datatables/css/button.dataTables.min.css"
+      rel="stylesheet"
+      s
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendors/datatables/css/dataTables.min.css"
+    />
+
+    <!-- FAVICON -->
+    <link
+      rel="shortcut icon"
+      href="assets/img/svg/favicon.svg"
+      type="image/x-icon"
+    />
+
+    <!-- GLOBAL CSS CONFIGURATION -->
+    <link rel="stylesheet" href="assets/css/global.styles.css" />
+
+    <!-- CUSTOM CSS CONFIGURATION -->
+    <link rel="stylesheet" href="assets/css/main.styles.css" />
+  </head>
+  <body>
+    <main class="" style="background-color: var(--gray)">
+      <nav class="">
+        <div class="row width">
+          <div class="col-2 flex align-items-center justify-content-center">
+            <img src="assets/img/images/logo.png" class="w-75" alt="" />
+          </div>
+          <div class="col-7 d-flex align-items-center justify-content-between">
+            <h1 class="me-5">Dashboard</h1>
+            <div
+              class="nav__searchbox border px-3 py-2 d-flex align-items-center justify-content-center d-none d-md-block"
+            >
+              <input
+                type="text"
+                placeholder="Search for agents, terminals, and aggregators"
+                class=""
+              />
+              <i class="bi bi-search"></i>
+            </div>
+          </div>
+          <div class="col-3 d-flex justify-content-end align-items-center">
+            <div class="d-flex flex-column nav__name d-none d-md-block">
+              <span>Harpreet Umar</span>
+              <span>ADMIN/COO</span>
+            </div>
+            <div class="dropdown mx-4 d-none d-md-block">
+              <div
+                class="dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="assets/img/images/avatar.jpeg"
+                  class="avatar-img"
+                  alt=""
+                />
+                <!-- <i class="bi bi-chevron-down"></i> -->
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Account</a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="nav__notification d-flex justify-content-center align-items-center"
+            >
+              <i class="bi bi-bell-fill"></i>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section class="main-container width">
+        <div class="row">
+          <aside class="col-lg-3 d-none d-lg-block mt-3">
+            <div class="sidebar__main box d-flex flex-column p-4">
+              <div
+                class="d-flex justify-content-start align-items-center active"
+              >
+                <img src="assets/img/svg/Dashboard.svg" alt="" />
+                <span class="ps-3">Dashboard</span>
+              </div>
+              <div class="d-flex justify-content-start align-items-center">
+                <img src="assets/img/svg/Aggregator.svg" alt="" />
+
+                <span class="ps-3">Aggregators</span>
+              </div>
+              <div class="d-flex justify-content-start align-items-center">
+                <img src="assets/img/svg/Agent.svg" alt="" />
+                <span class="ps-3">Agent</span>
+              </div>
+              <div class="d-flex justify-content-start align-items-center">
+                <img src="assets/img/svg/Terminal.svg" alt="" />
+                <span class="ps-3">POS/Terminals</span>
+              </div>
+              <div class="d-flex justify-content-start align-items-center">
+                <img src="assets/img/svg/Chart.svg" alt="" />
+
+                <span class="ps-3">Transaction History</span>
+              </div>
+            </div>
+
+            <div class="sidebar__main box d-flex flex-column p-4 mt-4">
+              <div class="d-flex justify-content-start align-items-center">
+                <img src="assets/img/svg/Chart.svg" alt="" />
+
+                <span class="ps-3">Settings</span>
+              </div>
+              <div class="d-flex justify-content-start align-items-center">
+                <img src="assets/img/svg/Logout.svg" alt="" />
+                <span class="ps-3">Logout</span>
+              </div>
+            </div>
+          </aside>
+
+          <article class="col-lg-9">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
+                <div class="box box-content position-relative">
+                  <span>Super Agents</span>
+                  <h1>60</h1>
+                  <span> <a href=""> See all super agents </a></span>
+                  <div class="underline">
+                    <div></div>
+                  </div>
+
+                  <article>
+                    <img src="assets/img/svg/SuperAgent.svg" alt="" />
+                  </article>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
+                <div class="box position-relative box-content">
+                  <span>Aggregators</span>
+                  <h1>25</h1>
+                  <span>See all aggregators</span>
+                  <div class="underline">
+                    <div></div>
+                  </div>
+
+                  <article>
+                    <img src="assets/img/svg/Aggregator.svg" alt="" />
+                  </article>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
+                <div class="box box-content position-relative">
+                  <span>Agents</span>
+                  <h1>100</h1>
+                  <span>See all agents</span>
+                  <div class="underline">
+                    <div></div>
+                  </div>
+
+                  <article>
+                    <img src="assets/img/svg/Agent.svg" alt="" />
+                  </article>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
+                <div class="box box-content position-relative">
+                  <span>PoS/Terminals</span>
+                  <!-- <article></article> -->
+                  <h1>10</h1>
+                  <!-- <span>active</span> -->
+
+                  <span>See all terminals</span>
+                  <div class="underline">
+                    <div></div>
+                  </div>
+
+                  <article>
+                    <img src="assets/img/svg/Terminal.svg" alt="" />
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <section class="mt-4">
+              <div class="row">
+                <div class="col-lg-9">
+                  <div class="box mb-4">
+                    <div
+                      class="d-flex justify-content-between align-items-center flex-column flex-sm-row"
+                    >
+                      <div class="d-flex align-items-center">
+                        <article class="transaction__icon">
+                          <img src="assets/img/svg/SuperAgent.svg" alt="" />
+                        </article>
+                        <h6 class="ms-3">Transaction Performance</h6>
+                      </div>
+                      <div>
+                        <input
+                          type="text"
+                          name="daterange"
+                          class="daterange"
+                          style="font-size: 0.8rem"
+                        />
+                        <div class="underline">
+                          <div></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div>
+                        <canvas id="lineChart" height="71" width="100"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="row gy-3">
+                    <div class="col-lg-12 col-sm-6">
+                      <div class="box">
+                        <div
+                          class="d-flex justify-content-start align-items-center mb-2"
+                        >
+                          <article class="transaction__icon">
+                            <img src="assets/img/svg/Terminal.svg" alt="" />
+                          </article>
+                          <h6 class="ms-3">Terminal Status</h6>
+                        </div>
+                        <div class="">
+                          <canvas id="doughnutChart"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12 col-sm-6">
+                      <div class="box">
+                        <div
+                          class="d-flex justify-content-start align-items-center mb-2"
+                        >
+                          <article class="transaction__icon">
+                            <img src="assets/img/svg/Terminal.svg" alt="" />
+                          </article>
+                          <h6 class="ms-3">Status</h6>
+                        </div>
+                        <div class="">
+                          <canvas id="doughnutChart2"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="mt-4">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="box">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <div class="d-flex align-items-center">
+                        <article class="transaction__icon">
+                          <img src="assets/img/svg/SuperAgent.svg" alt="" />
+                        </article>
+                        <h6 class="ms-3">Zonal Performance</h6>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div>
+                        <canvas id="barChart" width="100" height="40"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-12 mt-4">
+                  <div class="row gy-4">
+                    <div class="col-md-6">
+                      <div class="box">
+                        <div
+                          class="d-flex justify-content-start align-items-center mb-2"
+                        >
+                          <article class="transaction__icon">
+                            <img src="assets/img/svg/SuperAgent.svg" alt="" />
+                          </article>
+                          <h6 class="ms-3">Transactions</h6>
+                        </div>
+                        <div class="table-responsive">
+                          <table
+                            id="table_id"
+                            class="display table table-striped table-responsive"
+                          >
+                            <thead>
+                              <tr>
+                                <th>Entity ID</th>
+                                <th>Agent Name</th>
+                                <th>Value (N)</th>
+                                <th>Transaction Date</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1234</td>
+                                <td>Caleb Exchange</td>
+                                <td>65,700.00</td>
+                                <td>28h, May 200</td>
+                              </tr>
+                              <tr>
+                                <td>1234</td>
+                                <td>John Exchange</td>
+                                <td>75,700.00</td>
+                                <td>28h, May 200</td>
+                              </tr>
+                              <tr>
+                                <td>1234</td>
+                                <td>John Exchange</td>
+                                <td>85,700.00</td>
+                                <td>28h, May 200</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="box">
+                        <div
+                          class="d-flex justify-content-start align-items-center mb-2"
+                        >
+                          <article class="transaction__icon">
+                            <img src="assets/img/svg/SuperAgent.svg" alt="" />
+                          </article>
+                          <h6 class="ms-3">Best Performing Agents</h6>
+                        </div>
+                        <div>
+                          <table
+                            id="table_id_2"
+                            class="display table table-striped"
+                          >
+                            <thead>
+                              <tr>
+                                <th>Parent ID</th>
+                                <th>Total Transaction Value</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>1234</td>
+                                <td>17,928,374.00</td>
+                              </tr>
+                              <tr>
+                                <td>1234</td>
+                                <td>1234</td>
+                              </tr>
+                              <tr>
+                                <td>1234</td>
+                                <td>17,928,374.00</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="p-4 text-center">
+      <span
+        >Powered by: NowNow Digital Systems,
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </span>
+    </footer>
+
+    <!-- CUSTOM JS -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="assets/vendors/chartjs/chart.min.js"></script>
+    <script src="assets/vendors/daterangepicker/moment.min.js"></script>
+    <script src="assets/vendors/daterangepicker/daterangepicker.js"></script>
+    <script src="assets/vendors/datatables/js/dataTables.min.js"></script>
+    <script src="assets/vendors/datatables/js/dataTables.button.min.js"></script>
+    <script src="assets/vendors/datatables/js/jszip.min.js"></script>
+    <script src="assets/vendors/datatables/js/pdfmake.min.js"></script>
+    <script src="assets/vendors/datatables/js/vfs_fonts.js"></script>
+    <script src="assets/vendors/datatables/js/buttons.html5.min.js"></script>
+    <script src="assets/vendors/datatables/js/buttons.print.min.js"></script>
+
+    <!-- CUSTOM IMPORT -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
