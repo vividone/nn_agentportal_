@@ -55,3 +55,7 @@ a:active {
 .active {
   font-weight: bold;
 }
+
+footer {
+  font-weight: 500;
+}

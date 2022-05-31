@@ -1,10 +1,17 @@
+// import $ from "jquery";
+import * as bootstrap from "bootstrap";
+import "chart.js/dist/chart";
+import "datatables.net/js/jquery.dataTables.min.js";
+import "datatables.net-dt/js/dataTables.dataTables.min.js";
+
+// ---------------- DATE RANGE PICKER -----------------------------
 $('input[name="daterange"]').daterangepicker({
   opens: "left",
   startDate: "03/05/2022",
   endDate: "03/06/2022",
 });
 
-// CHART JS
+// ---------------- CHART JS -----------------------------
 
 // LINE CHART
 const lineChartLabels = [
@@ -90,7 +97,6 @@ const doughnitChartConfig2 = {
 
 // RENDER THE CHART
 const doughnutChart2 = new Chart($("#doughnutChart2"), doughnitChartConfig2);
-// doughnutChart2.height = 10;
 
 // BAR CHART CONFIGURATION
 
@@ -140,3 +146,16 @@ const barChartConfig = {
 
 // RENDER THE CHART
 const barChart = new Chart($("#barChart"), barChartConfig);
+
+// ---------------- DATA TABLES -----------------------------
+$("#table_id").DataTable({
+  searching: true,
+  dom: "Bfrtip",
+  buttons: ["copy", "csv", "excel", "pdf", "print"],
+});
+
+$("#table_id_2").DataTable({
+  searching: true,
+  dom: "Bfrtip",
+  buttons: ["copy", "csv", "excel", "pdf", "print"],
+});
