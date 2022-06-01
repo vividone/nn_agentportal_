@@ -24,7 +24,7 @@ const lineChartData = {
       label: "Transaction Performance",
       backgroundColor: "hsla(38, 99%, 52%, 1)",
       borderColor: "hsla(38, 99%, 52%, 1)",
-      data: [0, 10, 5, 2, 20, 30, 45],
+      data: [100000, 250000, 350005, 2879000, 2700000, 756443, 450000],
     },
   ],
 };
@@ -43,7 +43,7 @@ const lineChart = new Chart($("#lineChart"), lineChartConfig);
 // DOUGHNUT CHART
 
 const doughnutChartData = {
-  labels: ["Active", "inactive"],
+  labels: ["Active", "In Active"],
   datasets: [
     {
       backgroundColor: ["hsla(38, 99%, 52%, 1)", "hsla(0, 0%, 85%, 1)"],
@@ -57,6 +57,12 @@ const doughnitChartConfig = {
   data: doughnutChartData,
   options: {
     maintainAspectRatio: true,
+    plugins: {
+      legend: {
+        position: "bottom",
+        align: "start",
+      },
+    },
   },
 };
 
@@ -85,6 +91,12 @@ const doughnitChartConfig2 = {
   data: doughnutChartData2,
   options: {
     maintainAspectRatio: true,
+    plugins: {
+      legend: {
+        position: "bottom",
+        align: "start",
+      },
+    },
   },
 };
 
@@ -93,31 +105,36 @@ const doughnutChart2 = new Chart($("#doughnutChart2"), doughnitChartConfig2);
 
 // BAR CHART CONFIGURATION
 
-const barChartLabels = ["Jan", "Feb", "March", "April", "May", "June", "July"];
+const barChartLabels = [
+  "South West",
+  "North West",
+  "South South",
+  "South East",
+  "North East",
+  "North Central",
+];
 
 const barChartData = {
   labels: barChartLabels,
   datasets: [
     {
       label: "My First Dataset",
-      data: [65, 59, 80, 81, 56, 55, 40],
+      data: [65000, 590000, 400000, 671000, 560000, 255000],
       backgroundColor: [
-        "rgba(255, 99, 132, 0.2)",
-        "rgba(255, 159, 64, 0.2)",
-        "rgba(255, 205, 86, 0.2)",
-        "rgba(75, 192, 192, 0.2)",
-        "rgba(54, 162, 235, 0.2)",
-        "rgba(153, 102, 255, 0.2)",
-        "rgba(201, 203, 207, 0.2)",
+        "hsla(38, 68%, 78%, 1)",
+        "hsla(38, 68%, 78%, 1)",
+        "hsla(38, 68%, 78%, 1)",
+        "hsla(38, 99%, 52%, 1)",
+        "hsla(38, 68%, 78%, 1)",
+        "hsla(38, 68%, 78%, 1)",
       ],
       borderColor: [
-        "rgb(255, 99, 132)",
-        "rgb(255, 159, 64)",
+        "hsla(38, 68%, 78%, 1)",
+        "hsla(38, 68%, 78%, 1)",
         "rgb(255, 205, 86)",
-        "rgb(75, 192, 192)",
-        "rgb(54, 162, 235)",
-        "rgb(153, 102, 255)",
-        "rgb(201, 203, 207)",
+        "hsla(38, 99%, 52%, 1)",
+        "hsla(38, 68%, 78%, 1)",
+        "hsla(38, 68%, 78%, 1)",
       ],
       borderWidth: 1,
     },
@@ -130,7 +147,7 @@ const barChartConfig = {
   options: {
     scales: {
       y: {
-        beginAtZero: true,
+        beginAtZero: false,
       },
     },
     responsive: true,
@@ -143,12 +160,8 @@ const barChart = new Chart($("#barChart"), barChartConfig);
 // ---------------- DATA TABLES -----------------------------
 $("#table_id").DataTable({
   searching: true,
-  dom: "Bfrtip",
-  buttons: ["copy", "csv", "excel", "pdf", "print"],
 });
 
 $("#table_id_2").DataTable({
   searching: true,
-  dom: "Bfrtip",
-  buttons: ["copy", "csv", "excel", "pdf", "print"],
 });
