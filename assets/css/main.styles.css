@@ -15,12 +15,13 @@
 }
 
 /* NAVBAR  PAGE */
-nav {
+.nav {
   padding: 2rem 3rem;
   position: sticky;
   top: 0;
   background-color: #fff;
   z-index: 100;
+  border-bottom: 2px solid var(--yellow);
 }
 .nav__searchbox {
   border-radius: 10px;
@@ -46,12 +47,19 @@ nav {
   padding: 5px 10px;
   background-color: rgb(240, 240, 240);
   border-radius: 100%;
+  margin-left: 1rem;
 }
 .nav__notification > i {
   font-size: 1.2rem;
   color: var(--yellow);
 }
 
+.nav__logout {
+  padding: 10px 10px;
+  background-color: rgb(240, 240, 240);
+  border-radius: 100%;
+  margin-left: 1rem;
+}
 .nav__name {
   font-size: 0.8rem;
 }
@@ -66,20 +74,46 @@ nav {
   background-color: var(--gray);
   height: 100%;
   padding: 20px 0;
+  position: relative;
+}
+
+.main-content {
+  position: relative;
+  left: 25%;
 }
 
 .width {
-  max-width: 85%;
+  max-width: 95%;
   margin-inline: auto;
 }
 
 /* SIDEBAR */
+
+.sidebar {
+  position: fixed;
+  left: 20px;
+  height: 75%;
+}
+
+@media (max-width: 991px) {
+  .main-content {
+    position: relative;
+    left: 0;
+  }
+
+  /* SIDEBAR */
+
+  .sidebar {
+    left: 0;
+  }
+}
 
 .box {
   background-color: #fff;
   border-top: 2px solid var(--yellow);
   border-bottom-right-radius: 1.5rem;
   padding: 20px;
+  height: 100%;
 }
 
 .sidebar__main > div {

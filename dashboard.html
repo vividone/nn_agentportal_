@@ -43,27 +43,50 @@
   </head>
   <body>
     <main class="" style="background-color: var(--gray)">
-      <nav class="">
-        <div class="row width">
-          <div class="col-2 flex align-items-center justify-content-center">
-            <img src="assets/img/images/logo.png" class="w-75" alt="" />
-          </div>
-          <div class="col-7 d-flex align-items-center justify-content-between">
-            <h1 class="me-5">Dashboard</h1>
-            <div
-              class="nav__searchbox border px-3 py-2 d-flex align-items-center justify-content-center d-none d-md-block"
-            >
-              <input
-                type="text"
-                placeholder="Search for agents, terminals, and aggregators"
-                class=""
-              />
-              <i class="bi bi-search"></i>
+      <nav class="navbar navbar-expand-lg nav navbar-light bg-light py-4">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" class="me-5">
+            <img src="assets/img/images/logo.png" width="130" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-md-block ms-5">
+              <h5>Dashboard</h5>
             </div>
-          </div>
-          <div class="col-3 d-flex justify-content-end align-items-center">
+            <ul
+              class="navbar-nav me-auto mb-2 mb-lg-0 d-block d-md-none text-center my-4"
+            >
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Aggregators</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">PoS/Terminal</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Transaction History</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Logout</a>
+              </li>
+            </ul>
             <div class="d-flex flex-column nav__name d-none d-md-block">
-              <span>Harpreet Umar</span>
+              <h6>Harpreet Umar</h6>
               <span>ADMIN/COO</span>
             </div>
             <div class="dropdown mx-4 d-none d-md-block">
@@ -90,9 +113,21 @@
               </ul>
             </div>
             <div
-              class="nav__notification d-flex justify-content-center align-items-center"
+              class="nav__notification d-flex justify-content-center align-items-center d-none d-md-block"
             >
               <i class="bi bi-bell-fill"></i>
+            </div>
+            <div
+              class="nav__logout d-flex justify-content-start align-items-center d-none d-md-block"
+              style="cursor: pointer"
+            >
+              <img
+                src="assets/img/svg/Logout.svg"
+                data-bs-toggle="tooltip"
+                data-bs-placement="bottom"
+                title="Logout"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -100,7 +135,7 @@
 
       <section class="main-container width">
         <div class="row">
-          <aside class="col-lg-3 d-none d-lg-block mt-3">
+          <aside class="col-lg-3 d-none d-lg-block mt-3 sidebar">
             <div class="sidebar__main box d-flex flex-column p-4">
               <div
                 class="d-flex justify-content-start align-items-center active"
@@ -128,7 +163,7 @@
               </div>
             </div>
 
-            <div class="sidebar__main box d-flex flex-column p-4 mt-4">
+            <!-- <div class="sidebar__main box d-flex flex-column p-4 mt-4">
               <div class="d-flex justify-content-start align-items-center">
                 <img src="assets/img/svg/Chart.svg" alt="" />
 
@@ -138,10 +173,10 @@
                 <img src="assets/img/svg/Logout.svg" alt="" />
                 <span class="ps-3">Logout</span>
               </div>
-            </div>
+            </div> -->
           </aside>
 
-          <article class="col-lg-9">
+          <article class="col-lg-9 main-content">
             <div class="row">
               <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
                 <div class="box box-content position-relative">
@@ -410,12 +445,6 @@
     <script src="assets/vendors/daterangepicker/moment.min.js"></script>
     <script src="assets/vendors/daterangepicker/daterangepicker.js"></script>
     <script src="assets/vendors/datatables/js/dataTables.min.js"></script>
-    <script src="assets/vendors/datatables/js/dataTables.button.min.js"></script>
-    <script src="assets/vendors/datatables/js/jszip.min.js"></script>
-    <script src="assets/vendors/datatables/js/pdfmake.min.js"></script>
-    <script src="assets/vendors/datatables/js/vfs_fonts.js"></script>
-    <script src="assets/vendors/datatables/js/buttons.html5.min.js"></script>
-    <script src="assets/vendors/datatables/js/buttons.print.min.js"></script>
 
     <!-- CUSTOM IMPORT -->
     <script src="assets/js/main.js"></script>
