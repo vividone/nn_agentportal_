@@ -91,11 +91,15 @@
 
 .main-content {
   position: relative;
-  left: 17%;
+  left: 25%;
 }
 
+.header-text > span {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
 .width {
-  max-width: 95%;
+  max-width: 90%;
   margin-inline: auto;
 }
 
@@ -103,7 +107,7 @@
 
 .sidebar {
   position: fixed;
-  left: 10px;
+  left: 20px;
   height: auto;
 }
 
@@ -187,13 +191,6 @@
 .thead > tr > th {
   font-size: 0.7rem;
 }
-/* footer {
-  position: sticky;
-  bottom: 0;
-  z-index: 100;
-  background-color: #fff;
-  border-top: 2px solid var(--yellow);
-} */
 
 .navbar-nav-text-item {
   font-size: 0.8rem;
@@ -201,4 +198,8 @@
 
 .table-items > tr > td {
   font-size: small;
+}
+
+.nav-text > a {
+  font-size: medium;
 }
