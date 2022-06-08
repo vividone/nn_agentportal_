@@ -73,7 +73,7 @@
   margin-left: 1rem;
 }
 .nav__name {
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
 
 .nav__name > span:first-child {
@@ -91,11 +91,11 @@
 
 .main-content {
   position: relative;
-  left: 27%;
+  left: 17%;
 }
 
 .width {
-  max-width: 90%;
+  max-width: 95%;
   margin-inline: auto;
 }
 
@@ -103,8 +103,8 @@
 
 .sidebar {
   position: fixed;
-  left: 20px;
-  height: 70%;
+  left: 10px;
+  height: auto;
 }
 
 @media (max-width: 991px) {
@@ -132,14 +132,14 @@
   padding: 1rem;
 }
 .sidebar__main > div:hover {
-  background-color: rgba(245, 245, 245, 0.651);
+  background-color: rgb(241, 241, 241);
   cursor: pointer;
   font-weight: bold;
 }
 
 .box-content > h1 {
-  font-weight: 500;
-  font-size: 3rem;
+  font-weight: 700;
+  font-size: 2rem;
 }
 
 .box-content > article {
@@ -180,14 +180,13 @@
   cursor: pointer;
 }
 
-.t2 > tr > td:nth-child(2) {
+.t2 > tr > td:last-child {
   text-align: right;
 }
 
-.th2 > tr > th:nth-child(2) {
-  text-align: right;
+.thead > tr > th {
+  font-size: 0.7rem;
 }
-
 /* footer {
   position: sticky;
   bottom: 0;
@@ -195,3 +194,11 @@
   background-color: #fff;
   border-top: 2px solid var(--yellow);
 } */
+
+.navbar-nav-text-item {
+  font-size: 0.8rem;
+}
+
+.table-items > tr > td {
+  font-size: small;
+}

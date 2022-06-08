@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
+    <title>Transaction</title>
 
     <link
       rel="stylesheet"
@@ -44,7 +44,7 @@
 
   <body>
     <main class="" style="background-color: var(--gray)">
-      <nav class="navbar nav navbar-light navbar-expand-lg bg-light py-3 px-1">
+      <nav class="navbar nav navbar-light navbar-expand-lg bg-light py-4 px-1">
         <div class="container-fluid">
           <a class="navbar-brand" href="#" class="me-5">
             <img src="assets/img/images/logo.png" width="130" alt="" />
@@ -157,9 +157,7 @@
         <div class="row">
           <aside class="col-lg-2 d-none d-lg-block mt-3 sidebar">
             <div class="sidebar__main box d-flex flex-column p-3 p-lg-2">
-              <div
-                class="d-flex justify-content-start align-items-center active"
-              >
+              <div class="d-flex justify-content-start align-items-center">
                 <img src="assets/img/svg/Dashboard.svg" alt="" />
                 <span class="ps-2"
                   ><a href="/dashboard.html">Dashboard</a></span
@@ -183,7 +181,9 @@
                 <img src="assets/img/svg/Terminal.svg" alt="" />
                 <span class="ps-2">POS/Terminals</span>
               </div>
-              <div class="d-flex justify-content-start align-items-center">
+              <div
+                class="d-flex justify-content-start align-items-center active"
+              >
                 <img src="assets/img/svg/Chart.svg" alt="" />
                 <span class="ps-2"
                   ><a href="/transaction.html">Transaction History</a></span
@@ -210,234 +210,227 @@
 
           <article class="col-lg-10 main-content">
             <div class="row">
-              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
+              <div class="col-lg-12 mt-3">
                 <div class="box box-content position-relative">
-                  <span>Super Agents</span>
-                  <h1>60</h1>
-                  <span> <a href=""> See all super agents </a></span>
-                  <div class="underline">
-                    <div></div>
+                  <div
+                    class="d-flex justify-content-start align-items-center mb-2"
+                  >
+                    <article class="transaction__icon">
+                      <img src="assets/img/svg/SuperAgent.svg" alt="" />
+                    </article>
+                    <h6 class="ms-3">Customise your report</h6>
                   </div>
 
-                  <article>
-                    <img src="assets/img/svg/SuperAgent.svg" alt="" />
-                  </article>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
-                <div class="box position-relative box-content">
-                  <span>Aggregators</span>
-                  <h1>25</h1>
-                  <span>See all aggregators</span>
-                  <div class="underline">
-                    <div></div>
+                  <div>
+                    <div class="">
+                      <div class="row">
+                        <div class="col-lg-11">
+                          <div class="row">
+                            <div class="col-lg-3 col-md-6">
+                              <div class="my-3">
+                                <input
+                                  type="email"
+                                  class="form-control"
+                                  id="exampleFormControlInput1"
+                                  placeholder="Super Agent ID"
+                                />
+                              </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                              <div class="my-3">
+                                <select
+                                  class="form-select"
+                                  aria-label="Default select example"
+                                >
+                                  <option selected>Zone</option>
+                                  <option value="1">One</option>
+                                  <option value="2">Two</option>
+                                  <option value="3">Three</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                              <div class="my-3">
+                                <select
+                                  class="form-select"
+                                  aria-label="Default select example"
+                                >
+                                  <option selected>Transacion Status</option>
+                                  <option value="1">One</option>
+                                  <option value="2">Two</option>
+                                  <option value="3">Three</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                              <div class="my-3">
+                                <select
+                                  class="form-select"
+                                  aria-label="Default select example"
+                                >
+                                  <option selected>Transacion Type</option>
+                                  <option value="1">One</option>
+                                  <option value="2">Two</option>
+                                  <option value="3">Three</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-1 my-3">
+                          <div>
+                            <img src="assets/img/svg/Search.svg" alt="" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-
-                  <article>
-                    <img src="assets/img/svg/Aggregator.svg" alt="" />
-                  </article>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
-                <div class="box box-content position-relative">
-                  <span>Agents</span>
-                  <h1>100</h1>
-                  <span>See all agents</span>
-                  <div class="underline">
-                    <div></div>
-                  </div>
-
-                  <article>
-                    <img src="assets/img/svg/Agent.svg" alt="" />
-                  </article>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
-                <div class="box box-content position-relative">
-                  <span>PoS/Terminals</span>
-                  <!-- <article></article> -->
-                  <h1>10</h1>
-                  <!-- <span>active</span> -->
-
-                  <span>See all terminals</span>
-                  <div class="underline">
-                    <div></div>
-                  </div>
-
-                  <article>
-                    <img src="assets/img/svg/Terminal.svg" alt="" />
-                  </article>
                 </div>
               </div>
             </div>
 
-            <section class="mt-4">
-              <div class="row">
-                <div class="col-lg-8 h-100">
-                  <div class="box mb-4">
-                    <div
-                      class="d-flex justify-content-between align-items-center flex-column flex-sm-row"
-                    >
-                      <div class="d-flex align-items-center">
-                        <article class="transaction__icon">
-                          <img src="assets/img/svg/SuperAgent.svg" alt="" />
-                        </article>
-                        <h6 class="ms-3">Transaction Performance</h6>
-                      </div>
-                      <div>
-                        <input
-                          type="text"
-                          name="daterange"
-                          class="daterange"
-                          style="font-size: 0.8rem"
-                        />
-                        <div class="underline">
-                          <div></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div>
-                      <div>
-                        <canvas id="lineChart" height="47" width="100"></canvas>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="box">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <div class="d-flex align-items-center">
-                        <article class="transaction__icon">
-                          <img src="assets/img/svg/SuperAgent.svg" alt="" />
-                        </article>
-                        <h6 class="ms-3">Zonal Performance</h6>
-                      </div>
-                    </div>
-
-                    <div>
-                      <div>
-                        <canvas id="barChart" width="100" height="45"></canvas>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 mt-sm-4 mt-lg-0">
-                  <div class="row gy-3">
-                    <div class="col-lg-12 col-sm-6">
-                      <div class="box">
-                        <div
-                          class="d-flex justify-content-start align-items-center mb-2"
-                        >
-                          <article class="transaction__icon">
-                            <img src="assets/img/svg/Terminal.svg" alt="" />
-                          </article>
-                          <h6 class="ms-3">Terminal Status</h6>
-                        </div>
-                        <div class="">
-                          <canvas id="doughnutChart"></canvas>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-12 col-sm-6">
-                      <div class="box">
-                        <div
-                          class="d-flex justify-content-start align-items-center mb-2"
-                        >
-                          <article class="transaction__icon">
-                            <img src="assets/img/svg/Terminal.svg" alt="" />
-                          </article>
-                          <h6 class="ms-3">Status</h6>
-                        </div>
-                        <div class="">
-                          <canvas id="doughnutChart2"></canvas>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <section class="mt-4">
+            <section class="">
               <div class="row">
                 <div class="col-lg-12 mt-4">
                   <div class="row gy-4">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                       <div class="box">
                         <div
                           class="d-flex justify-content-start align-items-center mb-2"
                         >
                           <article class="transaction__icon">
-                            <img src="assets/img/svg/SuperAgent.svg" alt="" />
+                            <img src="assets/img/svg/Transaction.svg" alt="" />
                           </article>
-                          <h6 class="ms-3">Transactions</h6>
+                          <h6 class="ms-3">Transaction History</h6>
                         </div>
                         <div class="table-responsive">
-                          <table id="" class="table table-responsive">
-                            <thead>
+                          <table
+                            id="table_id"
+                            class="display table table-striped"
+                          >
+                            <thead class="thead">
                               <tr>
+                                <th>S/N</th>
                                 <th>Entity ID</th>
                                 <th>Agent Name</th>
-                                <th>Value (N)</th>
+                                <th>Transaction ID</th>
                                 <th>Transaction Date</th>
+                                <th>Transaction Value</th>
+                                <th>Zone</th>
+                                <th>Opening Balance</th>
+                                <th>Closing Balance</th>
                               </tr>
                             </thead>
-                            <tbody>
+                            <tbody class="table-items">
                               <tr>
-                                <td>1234</td>
-                                <td>Caleb Exchange</td>
-                                <td>65,700.00</td>
-                                <td>28h, May 200</td>
+                                <td>1</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
+                                <td>450,090,890.00</td>
+                                <td>450,090,890.00</td>
                               </tr>
                               <tr>
-                                <td>1234</td>
-                                <td>John Exchange</td>
-                                <td>75,700.00</td>
-                                <td>28h, May 200</td>
+                                <td>2</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
+                                <td>450,090,890.00</td>
+                                <td>450,090,890.00</td>
                               </tr>
                               <tr>
-                                <td>1234</td>
-                                <td>John Exchange</td>
-                                <td>85,700.00</td>
-                                <td>28h, May 200</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="box">
-                        <div
-                          class="d-flex justify-content-start align-items-center mb-2"
-                        >
-                          <article class="transaction__icon">
-                            <img src="assets/img/svg/SuperAgent.svg" alt="" />
-                          </article>
-                          <h6 class="ms-3">Best Performing Agents</h6>
-                        </div>
-                        <div>
-                          <table id="" class="table">
-                            <thead>
-                              <tr>
-                                <th>Parent ID</th>
-                                <th>Total Transaction Value</th>
-                              </tr>
-                            </thead>
-                            <tbody class="t2">
-                              <tr>
-                                <td>1234</td>
-                                <td>17,928,374.00</td>
+                                <td>3</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
+                                <td>450,090,890.00</td>
+                                <td>450,090,890.00</td>
                               </tr>
                               <tr>
-                                <td>1234</td>
-                                <td>1234</td>
+                                <td>4</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
+                                <td>450,090,890.00</td>
+                                <td>450,090,890.00</td>
                               </tr>
                               <tr>
-                                <td>1234</td>
-                                <td>17,928,374.00</td>
+                                <td>5</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
+                                <td>450,090,890.00</td>
+                                <td>450,090,890.00</td>
+                              </tr>
+                              <tr>
+                                <td>6</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
+                                <td>450,090,890.00</td>
+                                <td>450,090,890.00</td>
+                              </tr>
+                              <tr>
+                                <td>7</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
+                                <td>450,090,890.00</td>
+                                <td>450,090,890.00</td>
+                              </tr>
+                              <tr>
+                                <td>8</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
+                                <td>450,090,890.00</td>
+                                <td>450,090,890.00</td>
+                              </tr>
+                              <tr>
+                                <td>9</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
+                                <td>450,090,890.00</td>
+                                <td>450,090,890.00</td>
+                              </tr>
+                              <tr>
+                                <td>10</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
+                                <td>450,090,890.00</td>
+                                <td>450,090,890.00</td>
                               </tr>
                             </tbody>
                           </table>
@@ -469,6 +462,12 @@
     <script src="assets/vendors/daterangepicker/moment.min.js"></script>
     <script src="assets/vendors/daterangepicker/daterangepicker.js"></script>
     <script src="assets/vendors/datatables/js/dataTables.min.js"></script>
+    <script src="assets/vendors/datatables/js/dataTables.button.min.js"></script>
+    <script src="assets/vendors/datatables/js/jszip.min.js"></script>
+    <script src="assets/vendors/datatables/js/pdfmake.min.js"></script>
+    <script src="assets/vendors/datatables/js/vfs_fonts.js"></script>
+    <script src="assets/vendors/datatables/js/buttons.html5.min.js"></script>
+    <script src="assets/vendors/datatables/js/buttons.print.min.js"></script>
 
     <!-- CUSTOM IMPORT -->
     <script src="assets/js/main.js"></script>
