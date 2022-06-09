@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+
+    <link
+      rel="stylesheet"
+      href="assets/vendors/bootstrap/css/bootstrap.min.css"
+    />
+
+    <!-- DATERANGEPICKER -->
+    <link
+      rel="stylesheet"
+      href="assets/vendors/daterangepicker/daterangepicker.css"
+    />
+
+    <!-- DATABASE TABLE -->
+    <link
+      href="assets/vendors/datatables/css/button.dataTables.min.css"
+      rel="stylesheet"
+      s
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendors/datatables/css/dataTables.min.css"
+    />
+
+    <!-- FAVICON -->
+    <link
+      rel="shortcut icon"
+      href="assets/img/svg/favicon.svg"
+      type="image/x-icon"
+    />
+
+    <!-- GLOBAL CSS CONFIGURATION -->
+    <link rel="stylesheet" href="assets/css/global.styles.css" />
+
+    <!-- CUSTOM CSS CONFIGURATION -->
+    <link rel="stylesheet" href="assets/css/main.styles.css" />
+  </head>
+
+  <body>
+    <main class="" style="background-color: var(--gray)">
+      <nav class="navbar nav navbar-light navbar-expand-lg bg-light py-3 px-1">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" class="me-5">
+            <img src="assets/img/images/logo.png" width="130" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <img src="assets/img/images/logo.png" width="130" alt="" />
+              </h5>
+              <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <div
+                class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-block ms-5"
+              ></div>
+              <ul
+                class="navbar-nav justify-content-end flex-grow-1 pe-3 d-block d-lg-none text-center"
+              >
+                <li class="nav-item nav-text">
+                  <a class="nav-link" href="dashboard.html">Dashboard</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="aggregators.html">Aggregators</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="agent.html">Agents</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="transaction.html"
+                    >Transaction History</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Logout</a>
+                </li>
+              </ul>
+
+              <div class="d-flex flex-column nav__name d-none d-lg-block">
+                <h6>Harpreet Umar</h6>
+                <span>ADMIN/COO</span>
+              </div>
+              <div class="dropdown mx-4 d-none d-lg-block">
+                <div
+                  class="dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="assets/img/images/avatar.jpeg"
+                    class="avatar-img"
+                    alt=""
+                  />
+                  <!-- <i class="bi bi-chevron-down"></i> -->
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Account</a>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="nav__notification d-flex justify-content-center align-items-center d-none d-lg-block"
+              >
+                <i class="bi bi-bell-fill"></i>
+              </div>
+              <!-- <div
+                class="nav__logout d-flex justify-content-start align-items-center d-none d-lg-block"
+                style="cursor: pointer"
+              >
+                <img
+                  src="assets/img/svg/Logout.svg"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="bottom"
+                  title="Logout"
+                  alt=""
+                />
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section class="main-container width">
+        <div class="row">
+          <aside class="col-lg-3 d-none d-lg-block mt-3 sidebar">
+            <div class="sidebar__main box d-flex flex-column p-3 p-lg-2">
+              <div
+                class="d-flex justify-content-start align-items-center active"
+              >
+                <img src="assets/img/svg/Dashboard.svg" alt="" />
+                <span class="ps-2"
+                  ><a href="/dashboard.html">Dashboard</a></span
+                >
+              </div>
+
+              <div class="d-flex justify-content-start align-items-center">
+                <img src="assets/img/svg/Aggregator.svg" alt="" />
+                <span class="ps-2">Aggregators</span>
+              </div>
+              <div class="d-flex justify-content-start align-items-center">
+                <img src="assets/img/svg/Agent.svg" alt="" />
+                <span class="ps-2">Agents</span>
+              </div>
+
+              <div class="d-flex justify-content-start align-items-center">
+                <img src="assets/img/svg/Chart.svg" alt="" />
+                <span class="ps-2"
+                  ><a href="/transaction.html">Transaction History</a></span
+                >
+              </div>
+              <div class="d-flex justify-content-start align-items-center">
+                <img src="assets/img/svg/Logout.svg" alt="" />
+                <span class="ps-2"
+                  ><a href="/authentication.html">Logout</a></span
+                >
+              </div>
+            </div>
+
+            <!-- <div class="sidebar__main box d-flex flex-column p-4 mt-4">
+              <div class="d-flex justify-content-start align-items-center">
+                <img src="assets/img/svg/Chart.svg" alt="" />
+
+                <span class="ps-3">Settings</span>
+              </div>
+              <div class="d-flex justify-content-start align-items-center">
+                <img src="assets/img/svg/Logout.svg" alt="" />
+                <span class="ps-3">Logout</span>
+              </div>
+            </div> -->
+          </aside>
+
+          <article class="col-lg-9 main-content">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
+                <div class="box box-content position-relative header-text">
+                  <span>Agents</span>
+                  <h1>60</h1>
+                  <div class="underline">
+                    <div></div>
+                  </div>
+
+                  <article>
+                    <img src="assets/img/svg/Agent.svg" alt="" />
+                  </article>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
+                <div class="box box-content position-relative header-text">
+                  <span>Aggregators</span>
+                  <h1>25</h1>
+                  <div class="underline">
+                    <div></div>
+                  </div>
+
+                  <article>
+                    <img src="assets/img/svg/Report.svg" alt="" />
+                  </article>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
+                <div class="box box-content position-relative header-text">
+                  <span>Transactions</span>
+                  <h1>900K</h1>
+                  <div class="underline">
+                    <div></div>
+                  </div>
+
+                  <article>
+                    <img src="assets/img/svg/Transaction.svg" alt="" />
+                  </article>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
+                <div class="box box-content position-relative header-text">
+                  <span>Commisions</span>
+                  <!-- <article></article> -->
+                  <h1>100K</h1>
+                  <!-- <span>active</span> -->
+
+                  <div class="underline">
+                    <div></div>
+                  </div>
+
+                  <article>
+                    <img src="assets/img/svg/Terminal.svg" alt="" />
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <section class="mt-4">
+              <div class="row">
+                <div class="col-lg-8 h-100">
+                  <div class="box">
+                    <div
+                      class="d-flex justify-content-start align-items-center mb-2"
+                    >
+                      <article class="transaction__icon">
+                        <img src="assets/img/svg/SuperAgent.svg" alt="" />
+                      </article>
+                      <h6 class="ms-3">Transactions</h6>
+                    </div>
+                    <div class="table-responsive">
+                      <table id="" class="table table-responsive">
+                        <thead>
+                          <tr>
+                            <th>Entity ID</th>
+                            <th>Agent Name</th>
+                            <th>Value (N)</th>
+                            <th>Transaction Date</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1234</td>
+                            <td>Caleb Exchange</td>
+                            <td>65,700.00</td>
+                            <td>28h, May 200</td>
+                          </tr>
+                          <tr>
+                            <td>1234</td>
+                            <td>John Exchange</td>
+                            <td>75,700.00</td>
+                            <td>28h, May 200</td>
+                          </tr>
+                          <tr>
+                            <td>1234</td>
+                            <td>John Exchange</td>
+                            <td>85,700.00</td>
+                            <td>28h, May 200</td>
+                          </tr>
+                          <tr>
+                            <td>1234</td>
+                            <td>John Exchange</td>
+                            <td>85,700.00</td>
+                            <td>28h, May 200</td>
+                          </tr>
+                          <tr>
+                            <td>1234</td>
+                            <td>John Exchange</td>
+                            <td>85,700.00</td>
+                            <td>28h, May 200</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4 mt-sm-4 mt-lg-0">
+                  <div class="row gy-3">
+                    <div class="col-lg-12 col-sm-6">
+                      <div class="box">
+                        <div
+                          class="d-flex justify-content-start align-items-center mb-2"
+                        >
+                          <article class="transaction__icon">
+                            <img src="assets/img/svg/Terminal.svg" alt="" />
+                          </article>
+                          <h6 class="ms-3">Transaction Status</h6>
+                        </div>
+                        <div class="">
+                          <canvas id="doughnutChart2"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="p-4 text-center">
+      <span
+        >Powered by: NowNow Digital Systems,
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </span>
+    </footer>
+
+    <!-- CUSTOM JS -->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="assets/vendors/chartjs/chart.min.js"></script>
+    <script src="assets/vendors/daterangepicker/moment.min.js"></script>
+    <script src="assets/vendors/daterangepicker/daterangepicker.js"></script>
+    <script src="assets/vendors/datatables/js/dataTables.min.js"></script>
+
+    <!-- CUSTOM IMPORT -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
