@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Super Agent</title>
+    <title>Agent</title>
 
     <link
       rel="stylesheet"
@@ -89,13 +89,10 @@
                   <a class="nav-link" href="super_agent.html">Super Agent</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="aggregators.html">Aggregators</a>
+                  <a class="nav-link" href="#">Aggregators</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="agent.html">Agent</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="terminals.html">PoS/Terminal</a>
+                  <a class="nav-link" href="#">PoS/Terminal</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="transaction.html"
@@ -166,9 +163,7 @@
                   ><a href="/dashboard.html">Dashboard</a></span
                 >
               </div>
-              <div
-                class="d-flex justify-content-start align-items-center active"
-              >
+              <div class="d-flex justify-content-start align-items-center">
                 <img src="assets/img/svg/Aggregator.svg" alt="" />
                 <span class="ps-2"
                   ><a href="/super_agent.html">Super Agent</a></span
@@ -176,19 +171,19 @@
               </div>
               <div class="d-flex justify-content-start align-items-center">
                 <img src="assets/img/svg/Aggregator.svg" alt="" />
-                <span class="ps-2"
-                  ><a href="/aggregators.html">Aggregators</a></span
-                >
+                <span class="ps-2">Aggregators</span>
               </div>
               <div class="d-flex justify-content-start align-items-center">
                 <img src="assets/img/svg/Agent.svg" alt="" />
-                <span class="ps-2"><a href="/agent.html">Agent</a></span>
+                <span class="ps-2">Agent</span>
               </div>
               <div class="d-flex justify-content-start align-items-center">
                 <img src="assets/img/svg/Terminal.svg" alt="" />
                 <span class="ps-2">POS/Terminals</span>
               </div>
-              <div class="d-flex justify-content-start align-items-center">
+              <div
+                class="d-flex justify-content-start align-items-center active"
+              >
                 <img src="assets/img/svg/Chart.svg" alt="" />
                 <span class="ps-2"
                   ><a href="/transaction.html">Transaction History</a></span
@@ -215,63 +210,58 @@
 
           <article class="col-lg-9 main-content">
             <div class="row">
-              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
-                <div class="box box-content position-relative header-text">
-                  <span>Transaction Volume</span>
-                  <h1>6,750</h1>
-                  <!-- <span class="visibility-hidden" > <a href=""> See all super agents </a></span> -->
-                  <div class="underline">
-                    <div></div>
+              <div class="col-lg-12 mt-3">
+                <div class="box box-content position-relative">
+                  <div
+                    class="d-flex justify-content-start align-items-center mb-2"
+                  >
+                    <article class="transaction__icon">
+                      <img src="assets/img/svg/SuperAgent.svg" alt="" />
+                    </article>
+                    <h6 class="ms-3">Customise your report</h6>
                   </div>
 
-                  <article>
-                    <img src="assets/img/svg/Chart.svg" alt="" />
-                  </article>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
-                <div class="box position-relative box-content header-text">
-                  <span>Agent Counts</span>
-                  <h1>678</h1>
-                  <!-- <span>See all aggregators</span> -->
-                  <div class="underline">
-                    <div></div>
+                  <div>
+                    <div class="">
+                      <div class="row">
+                        <div class="col-lg-11">
+                          <div class="row">
+                            <div class="col-lg-5 col-md-6">
+                              <div class="my-3">
+                                <input
+                                  type="text"
+                                  name="daterange"
+                                  class="daterange"
+                                  style="font-size: 0.9rem"
+                                />
+                                <div class="underline">
+                                  <div></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6">
+                              <div class="my-3">
+                                <select
+                                  class="form-select"
+                                  aria-label="Default select example"
+                                >
+                                  <option selected>Zone</option>
+                                  <option value="1">North West</option>
+                                  <option value="2">South South</option>
+                                  <option value="3">South East</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-lg-1 my-3">
+                              <div>
+                                <img src="assets/img/svg/Search.svg" alt="" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-
-                  <article>
-                    <img src="assets/img/svg/Aggregator.svg" alt="" />
-                  </article>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
-                <div class="box box-content position-relative header-text">
-                  <span>Transaction Value</span>
-                  <h1>234M</h1>
-                  <!-- <span>See all agents</span> -->
-                  <div class="underline">
-                    <div></div>
-                  </div>
-
-                  <article>
-                    <img src="assets/img/svg/Transaction.svg" alt="" />
-                  </article>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
-                <div class="box box-content position-relative header-text">
-                  <span>Terminals</span>
-                  <!-- <article></article> -->
-                  <h1>2466</h1>
-                  <!-- <span>active</span> -->
-
-                  <!-- <span>See all terminals</span> -->
-                  <div class="underline">
-                    <div></div>
-                  </div>
-
-                  <article>
-                    <img src="assets/img/svg/Terminal.svg" alt="" />
-                  </article>
                 </div>
               </div>
             </div>
@@ -286,9 +276,9 @@
                           class="d-flex justify-content-start align-items-center mb-2"
                         >
                           <article class="transaction__icon">
-                            <img src="assets/img/svg/SuperAgent.svg" alt="" />
+                            <img src="assets/img/svg/Transaction.svg" alt="" />
                           </article>
-                          <h5 class="ms-3">Super Agent Report</h5>
+                          <h6 class="ms-3">Transaction History</h6>
                         </div>
                         <div class="table-responsive">
                           <table
@@ -298,279 +288,126 @@
                             <thead class="thead">
                               <tr>
                                 <th>S/N</th>
+                                <th>Entity ID</th>
                                 <th>Agent Name</th>
-                                <th>Active Zones</th>
-                                <th>Active States Count</th>
-                                <th>Agent Count</th>
-                                <th>Transaction Volume</th>
+                                <th>Transaction ID</th>
+                                <th>Transaction Date</th>
                                 <th>Transaction Value</th>
-                                <th>Action</th>
+                                <th>Zone</th>
+                                <th>Opening Balance</th>
+                                <th>Closing Balance</th>
                               </tr>
                             </thead>
                             <tbody class="table-items">
                               <tr>
                                 <td>1</td>
+                                <td>654560978890</td>
                                 <td>MARITECH GLOBAL RESOURCES</td>
-                                <td>90</td>
-                                <td>45</td>
-                                <td>45</td>
-                                <td>450</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
                                 <td>450,090,890.00</td>
-                                <td>
-                                  <span
-                                    class=""
-                                    type="button"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#successModal"
-                                  >
-                                    <img
-                                      src="assets/img/svg/Action.svg"
-                                      alt=""
-                                    />
-                                  </span>
-                                </td>
+                                <td>450,090,890.00</td>
                               </tr>
                               <tr>
                                 <td>2</td>
-                                <td>AZEEMALIK CONCEPT</td>
-                                <td>90</td>
-                                <td>45</td>
-                                <td>45</td>
-                                <td>450</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
                                 <td>450,090,890.00</td>
-                                <td>
-                                  <span
-                                    class=""
-                                    type="button"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#successModal"
-                                  >
-                                    <img
-                                      src="assets/img/svg/Action.svg"
-                                      alt=""
-                                    />
-                                  </span>
-                                </td>
+                                <td>450,090,890.00</td>
                               </tr>
                               <tr>
                                 <td>3</td>
-                                <td>DAMMY COMMUNICATION WORLDS</td>
-                                <td>90</td>
-                                <td>45</td>
-                                <td>45</td>
-                                <td>450</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
                                 <td>450,090,890.00</td>
-                                <td>
-                                  <span
-                                    class=""
-                                    type="button"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#successModal"
-                                  >
-                                    <img
-                                      src="assets/img/svg/Action.svg"
-                                      alt=""
-                                    />
-                                  </span>
-                                </td>
+                                <td>450,090,890.00</td>
                               </tr>
                               <tr>
                                 <td>4</td>
-                                <td>HELPDESK TELECOM</td>
-                                <td>90</td>
-                                <td>45</td>
-                                <td>45</td>
-                                <td>450</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
                                 <td>450,090,890.00</td>
-                                <td>
-                                  <span
-                                    class=""
-                                    type="button"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#successModal"
-                                  >
-                                    <img
-                                      src="assets/img/svg/Action.svg"
-                                      alt=""
-                                    />
-                                  </span>
-                                </td>
+                                <td>450,090,890.00</td>
                               </tr>
                               <tr>
                                 <td>5</td>
-                                <td>AZEEMALIK CONCEPT</td>
-                                <td>90</td>
-                                <td>45</td>
-                                <td>45</td>
-                                <td>450</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
                                 <td>450,090,890.00</td>
-                                <td>
-                                  <span
-                                    class=""
-                                    type="button"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#successModal"
-                                  >
-                                    <img
-                                      src="assets/img/svg/Action.svg"
-                                      alt=""
-                                    />
-                                  </span>
-                                </td>
+                                <td>450,090,890.00</td>
                               </tr>
                               <tr>
                                 <td>6</td>
-                                <td>DAMMY COMMUNICATION WORLDS</td>
-                                <td>90</td>
-                                <td>45</td>
-                                <td>45</td>
-                                <td>450</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
                                 <td>450,090,890.00</td>
-                                <td>
-                                  <span
-                                    class=""
-                                    type="button"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#successModal"
-                                  >
-                                    <img
-                                      src="assets/img/svg/Action.svg"
-                                      alt=""
-                                    />
-                                  </span>
-                                </td>
+                                <td>450,090,890.00</td>
                               </tr>
                               <tr>
                                 <td>7</td>
+                                <td>654560978890</td>
                                 <td>MARITECH GLOBAL RESOURCES</td>
-                                <td>90</td>
-                                <td>45</td>
-                                <td>45</td>
-                                <td>450</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
                                 <td>450,090,890.00</td>
-                                <td>
-                                  <span
-                                    class=""
-                                    type="button"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#successModal"
-                                  >
-                                    <img
-                                      src="assets/img/svg/Action.svg"
-                                      alt=""
-                                    />
-                                  </span>
-                                </td>
+                                <td>450,090,890.00</td>
                               </tr>
                               <tr>
                                 <td>8</td>
-                                <td>AZEEMALIK CONCEPT</td>
-                                <td>90</td>
-                                <td>45</td>
-                                <td>45</td>
-                                <td>450</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
                                 <td>450,090,890.00</td>
-                                <td>
-                                  <span
-                                    class=""
-                                    type="button"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#successModal"
-                                  >
-                                    <img
-                                      src="assets/img/svg/Action.svg"
-                                      alt=""
-                                    />
-                                  </span>
-                                </td>
+                                <td>450,090,890.00</td>
                               </tr>
                               <tr>
                                 <td>9</td>
+                                <td>654560978890</td>
                                 <td>MARITECH GLOBAL RESOURCES</td>
-                                <td>90</td>
-                                <td>45</td>
-                                <td>45</td>
-                                <td>450</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
                                 <td>450,090,890.00</td>
-                                <td>
-                                  <span
-                                    class=""
-                                    type="button"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#successModal"
-                                  >
-                                    <img
-                                      src="assets/img/svg/Action.svg"
-                                      alt=""
-                                    />
-                                  </span>
-                                </td>
+                                <td>450,090,890.00</td>
                               </tr>
                               <tr>
                                 <td>10</td>
-                                <td>AZEEMALIK CONCEPT</td>
-                                <td>90</td>
-                                <td>45</td>
-                                <td>45</td>
-                                <td>450</td>
-                                <td>450,090,890.00</td>
-                                <td>
-                                  <span
-                                    class=""
-                                    type="button"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#successModal"
-                                  >
-                                    <img
-                                      src="assets/img/svg/Action.svg"
-                                      alt=""
-                                    />
-                                  </span>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>11</td>
+                                <td>654560978890</td>
                                 <td>MARITECH GLOBAL RESOURCES</td>
-                                <td>90</td>
-                                <td>45</td>
-                                <td>45</td>
-                                <td>450</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
                                 <td>450,090,890.00</td>
-                                <td>
-                                  <span
-                                    class=""
-                                    type="button"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#successModal"
-                                  >
-                                    <img
-                                      src="assets/img/svg/Action.svg"
-                                      alt=""
-                                    />
-                                  </span>
-                                </td>
-                              </tr>
-                              <tr>
-                                <td>12</td>
-                                <td>AZEEMALIK CONCEPT</td>
-                                <td>90</td>
-                                <td>45</td>
-                                <td>45</td>
-                                <td>450</td>
                                 <td>450,090,890.00</td>
-                                <td>
-                                  <span
-                                    class=""
-                                    type="button"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#successModal"
-                                  >
-                                    <img
-                                      src="assets/img/svg/Action.svg"
-                                      alt=""
-                                    />
-                                  </span>
-                                </td>
                               </tr>
                             </tbody>
                           </table>
@@ -593,89 +430,6 @@
         </script>
       </span>
     </footer>
-
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="successModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content box">
-          <div class="modal-body px-3 py-2">
-            <div class="d-flex justify-content-between align-items-center">
-              <div>
-                <img src="assets/img/svg/SuperAgent.svg" alt="" />
-                <span style="font-weight: bold">Super Agent Summary</span>
-              </div>
-              <span class="" style="cursor: pointer" data-bs-dismiss="modal">
-                <i
-                  class="bi bi-x-lg"
-                  style="font-size: 1.5rem; color: var(--yellow)"
-                ></i>
-              </span>
-            </div>
-
-            <div class="my-4" style="border-bottom: 2px solid var(--yellow)">
-              <h4>KENNY STORE</h4>
-            </div>
-
-            <div class="d-flex justify-content-between align-items-center mb-5">
-              <div>
-                <h6>80039003</h6>
-                <div class="d-flex align-items-left header-text">
-                  <img src="assets/img/svg/SuperAgent.svg" alt="" />
-                  <span class="ps-2"> Agent ID</span>
-                </div>
-              </div>
-              <div>
-                <h6>19.00</h6>
-                <div class="d-flex align-items-left header-text">
-                  <img src="assets/img/svg/Transaction.svg" alt="" />
-                  <span class="ps-2"> Agent Commission</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="d-flex justify-content-between align-items-center mb-5">
-              <div>
-                <h6>SOUTH WEST</h6>
-                <div class="d-flex align-items-left header-text">
-                  <img src="assets/img/svg/SuperAgent.svg" alt="" />
-                  <span class="ps-2"> Agent Zone </span>
-                </div>
-              </div>
-              <div>
-                <h6>6,667</h6>
-                <div class="d-flex align-items-left header-text">
-                  <img src="assets/img/svg/Chart.svg" alt="" />
-                  <span class="ps-2"> Transaction Volume</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="d-flex justify-content-between align-items-center">
-              <div>
-                <h6>2,190</h6>
-                <div class="d-flex align-items-center header-text">
-                  <img src="assets/img/svg/Terminal.svg" alt="" />
-                  <span class="ps-2"> Terminals Count</span>
-                </div>
-              </div>
-              <div>
-                <h6>N234,000,098.00</h6>
-                <div class="d-flex align-items-center header-text">
-                  <img src="assets/img/svg/Transaction.svg" alt="" />
-                  <span class="ps-2"> Transaction Value</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- CUSTOM JS -->
 
