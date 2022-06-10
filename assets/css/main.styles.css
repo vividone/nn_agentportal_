@@ -203,3 +203,8 @@
 .nav-text > a {
   font-size: medium;
 }
+
+.form-select,
+.form-control {
+  font-size: medium;
+}

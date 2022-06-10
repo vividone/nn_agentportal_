@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Transaction</title>
+    <title>Aggregator Dashboard</title>
 
     <link
       rel="stylesheet"
@@ -89,10 +89,13 @@
                   <a class="nav-link" href="super_agent.html">Super Agent</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Aggregators</a>
+                  <a class="nav-link" href="aggregators.html">Aggregators</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">PoS/Terminal</a>
+                  <a class="nav-link" href="agent.html">Agent</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="terminal.html">PoS/Terminal</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="transaction.html"
@@ -106,7 +109,7 @@
 
               <div class="d-flex flex-column nav__name d-none d-lg-block">
                 <h6>Harpreet Umar</h6>
-                <span>ADMIN/COO</span>
+                <span>AGGREGATOR</span>
               </div>
               <div class="dropdown mx-4 d-none d-lg-block">
                 <div
@@ -157,24 +160,15 @@
         <div class="row">
           <aside class="col-lg-3 d-none d-lg-block mt-3 sidebar">
             <div class="sidebar__main box d-flex flex-column p-3 p-lg-2">
-              <div class="d-flex justify-content-start align-items-center">
+              <div
+                class="d-flex justify-content-start align-items-center active"
+              >
                 <img src="assets/img/svg/Dashboard.svg" alt="" />
                 <span class="ps-2"
-                  ><a href="/dashboard.html">Dashboard</a></span
+                  ><a href="/aggregator_dashboard.html">Dashboard</a></span
                 >
               </div>
-              <div class="d-flex justify-content-start align-items-center">
-                <img src="assets/img/svg/Aggregator.svg" alt="" />
-                <span class="ps-2"
-                  ><a href="/super_agent.html">Super Agent</a></span
-                >
-              </div>
-              <div class="d-flex justify-content-start align-items-center">
-                <img src="assets/img/svg/Aggregator.svg" alt="" />
-                <span class="ps-2"
-                  ><a href="/aggregator.html">Aggregators</a></span
-                >
-              </div>
+
               <div class="d-flex justify-content-start align-items-center">
                 <img src="assets/img/svg/Agent.svg" alt="" />
                 <span class="ps-2"><a href="/agent.html">Agent</a></span>
@@ -185,9 +179,7 @@
                   ><a href="/terminal.html">POS/Terminals</a></span
                 >
               </div>
-              <div
-                class="d-flex justify-content-start align-items-center active"
-              >
+              <div class="d-flex justify-content-start align-items-center">
                 <img src="assets/img/svg/Chart.svg" alt="" />
                 <span class="ps-2"
                   ><a href="/transaction.html">Transaction History</a></span
@@ -198,96 +190,67 @@
                 <span class="ps-2">Logout</span>
               </div>
             </div>
-
-            <!-- <div class="sidebar__main box d-flex flex-column p-4 mt-4">
-              <div class="d-flex justify-content-start align-items-center">
-                <img src="assets/img/svg/Chart.svg" alt="" />
-
-                <span class="ps-3">Settings</span>
-              </div>
-              <div class="d-flex justify-content-start align-items-center">
-                <img src="assets/img/svg/Logout.svg" alt="" />
-                <span class="ps-3">Logout</span>
-              </div>
-            </div> -->
           </aside>
 
           <article class="col-lg-9 main-content">
             <div class="row">
-              <div class="col-lg-12 mt-3">
-                <div class="box box-content position-relative">
-                  <div
-                    class="d-flex justify-content-start align-items-center mb-2"
-                  >
-                    <article class="transaction__icon">
-                      <img src="assets/img/svg/SuperAgent.svg" alt="" />
-                    </article>
-                    <h6 class="ms-3">Customise your report</h6>
+              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
+                <div class="box box-content position-relative header-text">
+                  <span>Agents</span>
+                  <h1>6,750</h1>
+                  <!-- <span class="visibility-hidden" > <a href=""> See all super agents </a></span> -->
+                  <div class="underline">
+                    <div></div>
                   </div>
 
-                  <div>
-                    <div class="">
-                      <div class="row">
-                        <div class="col-lg-11">
-                          <div class="row">
-                            <div class="col-lg-3 col-md-6">
-                              <div class="my-3">
-                                <input
-                                  type="email"
-                                  class="form-control"
-                                  id="exampleFormControlInput1"
-                                  placeholder="Super Agent ID"
-                                />
-                              </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                              <div class="my-3">
-                                <select
-                                  class="form-select"
-                                  aria-label="Default select example"
-                                >
-                                  <option selected>Zone</option>
-                                  <option value="1">North West</option>
-                                  <option value="2">South South</option>
-                                  <option value="3">South East</option>
-                                </select>
-                              </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                              <div class="my-3">
-                                <select
-                                  class="form-select"
-                                  aria-label="Default select example"
-                                >
-                                  <option selected>Transaction Status</option>
-                                  <option value="1">Failed</option>
-                                  <option value="2">Successful</option>
-                                </select>
-                              </div>
-                            </div>
-                            <div class="col-lg-3 col-md-6">
-                              <div class="my-3">
-                                <select
-                                  class="form-select"
-                                  aria-label="Default select example"
-                                >
-                                  <option selected>Transaction Type</option>
-                                  <option value="1">One</option>
-                                  <option value="2">Two</option>
-                                  <option value="3">Three</option>
-                                </select>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-lg-1 my-3">
-                          <div>
-                            <img src="assets/img/svg/Search.svg" alt="" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  <article>
+                    <img src="assets/img/svg/Chart.svg" alt="" />
+                  </article>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
+                <div class="box position-relative box-content header-text">
+                  <span>Today's Transaction</span>
+                  <h1>678</h1>
+                  <!-- <span>See all aggregators</span> -->
+                  <div class="underline">
+                    <div></div>
                   </div>
+
+                  <article>
+                    <img src="assets/img/svg/Aggregator.svg" alt="" />
+                  </article>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
+                <div class="box box-content position-relative header-text">
+                  <span>Transaction Value</span>
+                  <h1>4M</h1>
+                  <!-- <span>See all agents</span> -->
+                  <div class="underline">
+                    <div></div>
+                  </div>
+
+                  <article>
+                    <img src="assets/img/svg/Transaction.svg" alt="" />
+                  </article>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
+                <div class="box box-content position-relative header-text">
+                  <span>Terminals</span>
+                  <!-- <article></article> -->
+                  <h1>24</h1>
+                  <!-- <span>active</span> -->
+
+                  <!-- <span>See all terminals</span> -->
+                  <div class="underline">
+                    <div></div>
+                  </div>
+
+                  <article>
+                    <img src="assets/img/svg/Terminal.svg" alt="" />
+                  </article>
                 </div>
               </div>
             </div>
@@ -304,7 +267,7 @@
                           <article class="transaction__icon">
                             <img src="assets/img/svg/Transaction.svg" alt="" />
                           </article>
-                          <h6 class="ms-3">Transaction History</h6>
+                          <h6 class="ms-3">Recent Transaction</h6>
                         </div>
                         <div class="table-responsive">
                           <table
@@ -319,7 +282,6 @@
                                 <th>Transaction ID</th>
                                 <th>Transaction Date</th>
                                 <th>Transaction Value</th>
-                                <th>Zone</th>
                                 <th>Opening Balance</th>
                                 <th>Closing Balance</th>
                               </tr>
@@ -332,7 +294,6 @@
                                 <td>654560978890</td>
                                 <td>07 June 2022</td>
                                 <td>₦ 60,000.00</td>
-                                <td>NORTH WEST</td>
                                 <td>450,090,890.00</td>
                                 <td>450,090,890.00</td>
                               </tr>
@@ -343,7 +304,6 @@
                                 <td>654560978890</td>
                                 <td>07 June 2022</td>
                                 <td>₦ 60,000.00</td>
-                                <td>NORTH WEST</td>
                                 <td>450,090,890.00</td>
                                 <td>450,090,890.00</td>
                               </tr>
@@ -354,7 +314,7 @@
                                 <td>654560978890</td>
                                 <td>07 June 2022</td>
                                 <td>₦ 60,000.00</td>
-                                <td>NORTH WEST</td>
+
                                 <td>450,090,890.00</td>
                                 <td>450,090,890.00</td>
                               </tr>
@@ -365,7 +325,7 @@
                                 <td>654560978890</td>
                                 <td>07 June 2022</td>
                                 <td>₦ 60,000.00</td>
-                                <td>NORTH WEST</td>
+
                                 <td>450,090,890.00</td>
                                 <td>450,090,890.00</td>
                               </tr>
@@ -376,7 +336,7 @@
                                 <td>654560978890</td>
                                 <td>07 June 2022</td>
                                 <td>₦ 60,000.00</td>
-                                <td>NORTH WEST</td>
+
                                 <td>450,090,890.00</td>
                                 <td>450,090,890.00</td>
                               </tr>
@@ -387,7 +347,7 @@
                                 <td>654560978890</td>
                                 <td>07 June 2022</td>
                                 <td>₦ 60,000.00</td>
-                                <td>NORTH WEST</td>
+
                                 <td>450,090,890.00</td>
                                 <td>450,090,890.00</td>
                               </tr>
@@ -398,7 +358,7 @@
                                 <td>654560978890</td>
                                 <td>07 June 2022</td>
                                 <td>₦ 60,000.00</td>
-                                <td>NORTH WEST</td>
+
                                 <td>450,090,890.00</td>
                                 <td>450,090,890.00</td>
                               </tr>
@@ -409,7 +369,7 @@
                                 <td>654560978890</td>
                                 <td>07 June 2022</td>
                                 <td>₦ 60,000.00</td>
-                                <td>NORTH WEST</td>
+
                                 <td>450,090,890.00</td>
                                 <td>450,090,890.00</td>
                               </tr>
@@ -420,7 +380,7 @@
                                 <td>654560978890</td>
                                 <td>07 June 2022</td>
                                 <td>₦ 60,000.00</td>
-                                <td>NORTH WEST</td>
+
                                 <td>450,090,890.00</td>
                                 <td>450,090,890.00</td>
                               </tr>
@@ -431,7 +391,7 @@
                                 <td>654560978890</td>
                                 <td>07 June 2022</td>
                                 <td>₦ 60,000.00</td>
-                                <td>NORTH WEST</td>
+
                                 <td>450,090,890.00</td>
                                 <td>450,090,890.00</td>
                               </tr>
@@ -456,6 +416,89 @@
         </script>
       </span>
     </footer>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="successModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content box">
+          <div class="modal-body px-3 py-2">
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <img src="assets/img/svg/SuperAgent.svg" alt="" />
+                <span style="font-weight: bold">Aggregator Summary</span>
+              </div>
+              <span class="" style="cursor: pointer" data-bs-dismiss="modal">
+                <i
+                  class="bi bi-x-lg"
+                  style="font-size: 1.5rem; color: var(--yellow)"
+                ></i>
+              </span>
+            </div>
+
+            <div class="my-4" style="border-bottom: 2px solid var(--yellow)">
+              <h4>KENNY STORE</h4>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-5">
+              <div>
+                <h6>80039003</h6>
+                <div class="d-flex align-items-left header-text">
+                  <img src="assets/img/svg/SuperAgent.svg" alt="" />
+                  <span class="ps-2"> Agent ID</span>
+                </div>
+              </div>
+              <div>
+                <h6>19.00</h6>
+                <div class="d-flex align-items-left header-text">
+                  <img src="assets/img/svg/Transaction.svg" alt="" />
+                  <span class="ps-2"> Agent Commission</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-5">
+              <div>
+                <h6>SOUTH WEST</h6>
+                <div class="d-flex align-items-left header-text">
+                  <img src="assets/img/svg/SuperAgent.svg" alt="" />
+                  <span class="ps-2"> Agent Zone </span>
+                </div>
+              </div>
+              <div>
+                <h6>6,667</h6>
+                <div class="d-flex align-items-left header-text">
+                  <img src="assets/img/svg/Chart.svg" alt="" />
+                  <span class="ps-2"> Transaction Volume</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h6>2,190</h6>
+                <div class="d-flex align-items-center header-text">
+                  <img src="assets/img/svg/Terminal.svg" alt="" />
+                  <span class="ps-2"> Terminals Count</span>
+                </div>
+              </div>
+              <div>
+                <h6>N234,000,098.00</h6>
+                <div class="d-flex align-items-center header-text">
+                  <img src="assets/img/svg/Transaction.svg" alt="" />
+                  <span class="ps-2"> Transaction Value</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- CUSTOM JS -->
 

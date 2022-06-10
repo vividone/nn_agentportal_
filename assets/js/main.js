@@ -160,8 +160,12 @@ const barChart = new Chart($("#barChart"), barChartConfig);
 // ---------------- DATA TABLES -----------------------------
 $("#table_id").DataTable({
   searching: true,
+  dom: "Bfrtip",
+  paging: true,
+  buttons: ["pdf", "print", "csv", "excel"],
 });
 
 $("#table_id_2").DataTable({
   searching: true,
+  paging: true,
 });
