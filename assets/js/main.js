@@ -1,8 +1,20 @@
 // ---------------- DATE RANGE PICKER -----------------------------
 $('input[name="daterange"]').daterangepicker({
-  opens: "left",
+  opens: "center",
+  drops: "auto",
   startDate: "03/05/2022",
   endDate: "03/06/2022",
+  ranges: {
+    Today: [moment(), moment()],
+    Yesterday: [moment().subtract(1, "days"), moment().subtract(1, "days")],
+    "Last 7 Days": [moment().subtract(6, "days"), moment()],
+    "Last 30 Days": [moment().subtract(29, "days"), moment()],
+    "This Month": [moment().startOf("month"), moment().endOf("month")],
+    "Last Month": [
+      moment().subtract(1, "month").startOf("month"),
+      moment().subtract(1, "month").endOf("month"),
+    ],
+  },
 });
 
 // ---------------- CHART JS -----------------------------
