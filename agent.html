@@ -274,12 +274,29 @@
                     <div class="col-md-12">
                       <div class="box">
                         <div
-                          class="d-flex justify-content-start align-items-center mb-3"
+                          class="d-flex justify-content-between align-items-center mb-3 flex-column flex-md-row"
                         >
-                          <article class="transaction__icon">
-                            <img src="assets/img/svg/Transaction.svg" alt="" />
-                          </article>
-                          <h5 class="ms-3">Agent Reports</h5>
+                          <div
+                            class="d-flex justify-content-start align-items-center mb-3"
+                          >
+                            <article class="transaction__icon">
+                              <img
+                                src="assets/img/svg/Transaction.svg"
+                                alt=""
+                              />
+                            </article>
+                            <h5 class="ms-3">Agent Reports</h5>
+                          </div>
+
+                          <div>
+                            <button
+                              class="btn btn-warning"
+                              data-bs-toggle="modal"
+                              data-bs-target="#agentModal"
+                            >
+                              Add New Agent
+                            </button>
+                          </div>
                         </div>
                         <div class="table-responsive">
                           <table
@@ -431,6 +448,442 @@
         </script>
       </span>
     </footer>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="agentModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="agentModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content box">
+          <div class="modal-header">
+            <h5
+              class="modal-title"
+              id="agentModalLabel"
+              style="font-weight: bold"
+            >
+               Agent Registration
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="p-3 border border-2 mb-4">
+                <h5>Super Agent Personal Details</h5>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">First Name*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter First Name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Middle Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Middle Name"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Last Name*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Last Name"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Phone Number*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Phone Number"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Alternative Phone Number</label>
+                    <input
+                      type="texet"
+                      class="form-control"
+                      placeholder="Enter Alternative Phone Number"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Email Address*</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Enter Email Address"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Date of Birth*</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      placeholder="Enter Date of Birth"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Gender</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option selected>Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Landmark*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Landmark"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Province*</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option selected>Province</option>
+                      <option value="Province 1">Province 1</option>
+                      <option value="Province 2">Province 2</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">LGA*</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option selected>LGA</option>
+                      <option value="Some LGA">Some LGA</option>
+                      <option value="Some LGA">Some LGA</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Ward*</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option selected>Ward</option>
+                      <option value="Ward 1">Ward 1</option>
+                      <option value="Ward 2">Ward 2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label"
+                      >Residential Address</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="exampleFormControlTextarea1"
+                      rows="3"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-3 border border-2 mb-4">
+                <h5>Business Details</h5>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Business Name*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Business Name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Form ID*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Form ID"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Citizenship</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option selected>Select Citizenship</option>
+                      <option value="Citizenship">Citizenship</option>
+                      <option value="Citizenship">Citizenship</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Business Province*</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option selected>Province</option>
+                      <option value="Province 1">Province 1</option>
+                      <option value="Province 2">Province 2</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Business LGA*</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option selected>LGA</option>
+                      <option value="Some LGA">Some LGA</option>
+                      <option value="Some LGA">Some LGA</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Business Ward*</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option selected>Ward</option>
+                      <option value="Ward 1">Ward 1</option>
+                      <option value="Ward 2">Ward 2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label"
+                      >Business Registration Number*</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Business Registration Number"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Business Email Address*</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Enter Business Email Address"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Business Location*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Business Location"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-3 border border-2 mb-4">
+                <h5>Business Bank Account Details</h5>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">BVN*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter BVN"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Bank Name*</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option selected>Select Bank Name</option>
+                      <option value="First Bank">First Bank</option>
+                      <option value="GT Bank">GT Bank</option>
+                      <option value="Kuda Bank">Kuda Bank</option>
+                      <option value="Eco Bank">Eco Bank</option>
+                      <option value="Sterling Bank">Sterling Bank</option>
+                      <option value="Fidelity Bank">Fidelity Bank</option>
+                      <option value="Stanbic IBTC Bank">
+                        Stanbic IBTC Bank
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">BIN*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter BIN"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Bank Account Number*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Bank Account Number"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Account Name*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Account Name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Nick Name*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Nick Name"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Account Type*</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option selected>Select Account Type</option>
+                      <option value="Savings">Savings</option>
+                      <option value="Current">Current</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Submit Form</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- CUSTOM JS -->
 
