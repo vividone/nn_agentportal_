@@ -208,3 +208,9 @@
 .form-control {
   font-size: medium;
 }
+
+.arrow-down {
+  width: 10px;
+  height: 10px;
+  padding-left: 10px;
+}

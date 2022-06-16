@@ -172,12 +172,12 @@ const barChart = new Chart($("#barChart"), barChartConfig);
 // ---------------- DATA TABLES -----------------------------
 $("#table_id").DataTable({
   searching: true,
-  dom: "Bfrtip",
-  paging: true,
-  buttons: ["pdf", "print", "csv", "excel"],
+  scrollY: 400,
 });
 
-$("#table_id_2").DataTable({
+$("#table_id2").DataTable({
   searching: true,
   paging: true,
+  dom: "lBfrtip",
+  buttons: ["pdf", "print", "csv", "excel", "export"],
 });
