@@ -7,23 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aggregators</title>
 
-  <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/vendors/bootstrap/css/bootstrap.min.css" />
 
   <!-- DATERANGEPICKER -->
-  <link rel="stylesheet" href="assets/vendors/daterangepicker/daterangepicker.css" />
+  <link rel="stylesheet" href="../assets/vendors/daterangepicker/daterangepicker.css" />
 
   <!-- DATABASE TABLE -->
-  <link href="assets/vendors/datatables/css/button.dataTables.min.css" rel="stylesheet" s />
-  <link rel="stylesheet" href="assets/vendors/datatables/css/dataTables.min.css" />
+  <link href="../assets/vendors/datatables/css/button.dataTables.min.css" rel="stylesheet" s />
+  <link rel="stylesheet" href="../assets/vendors/datatables/css/dataTables.min.css" />
 
   <!-- FAVICON -->
-  <link rel="shortcut icon" href="assets/img/svg/favicon.svg" type="image/x-icon" />
+  <link rel="shortcut icon" href="../assets/img/svg/favicon.svg" type="image/x-icon" />
 
   <!-- GLOBAL CSS CONFIGURATION -->
-  <link rel="stylesheet" href="assets/css/global.styles.css" />
+  <link rel="stylesheet" href="../assets/css/global.styles.css" />
 
   <!-- CUSTOM CSS CONFIGURATION -->
-  <link rel="stylesheet" href="assets/css/main.styles.css" />
+  <link rel="stylesheet" href="../assets/css/main.styles.css" />
 </head>
 
 <body>
@@ -31,7 +31,7 @@
     <nav class="navbar nav navbar-light navbar-expand-lg bg-light py-3 px-1">
       <div class="container-fluid">
         <a class="navbar-brand" href="#" class="me-5">
-          <img src="assets/img/images/logo.png" width="130" alt="" />
+          <img src="../assets/img/images/logo.png" width="130" alt="" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar">
@@ -41,35 +41,33 @@
           aria-labelledby="offcanvasNavbarLabel">
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              <img src="assets/img/images/logo.png" width="130" alt="" />
+              <img src="../assets/img/images/logo.png" width="130" alt="" />
             </h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body">
             <div class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-block ms-5"></div>
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 d-block d-lg-none">
-              <li class="nav-item nav-text">
-                <a class="nav-link" href="dashboard.html">Dashboard</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="super_agent_dashboard.html">Super Agent</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="aggregators.html">Aggregators</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="terminal.html">Agent</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="terminal.html">PoS/Terminal</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="transaction.html">Transaction History</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Logout</a>
-              </li>
-            </ul>
+           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 d-block d-lg-none">
+             <li class="nav-item nav-text">
+               <a class="nav-link" href="../super_agent_dashboard.html">Dashboard</a>
+             </li>
+             <li class="nav-item dd dropdown">
+               <a class="nav-link dropdown-toggle onclick" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                 data-bs-toggle="dropdown" aria-expanded="false">
+                 Manage
+               </a>
+               <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                 <li><a class="dropdown-item" href="super_agent/s_agents.html">Agents</a></li>
+                 <li><a class="dropdown-item" href="super_agent/s_terminal.html">POS/Terminals</a></li>
+               </ul>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="super_agent/s_transaction.html">Transaction History</a>
+             </li>
+             <li class="nav-item">
+               <a class="nav-link" href="#">Logout</a>
+             </li>
+           </ul>
 
             <div class="d-flex flex-column nav__name d-none d-lg-block">
               <h6>Harpreet Umar</h6>
@@ -78,7 +76,7 @@
             <div class="dropdown mx-4 d-none d-lg-block">
               <div class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
                 aria-expanded="false" aria-expanded="false">
-                <img src="assets/img/images/avatar.jpeg" class="avatar-img" alt="" />
+                <img src="../assets/img/images/avatar.jpeg" class="avatar-img" alt="" />
                 <!-- <i class="bi bi-chevron-down"></i> -->
               </div>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -97,7 +95,7 @@
                 style="cursor: pointer"
               >
                 <img
-                  src="assets/img/svg/Logout.svg"
+                  src="../assets/img/svg/Logout.svg"
                   data-bs-toggle="tooltip"
                   data-bs-placement="bottom"
                   title="Logout"
@@ -114,31 +112,23 @@
         <aside class="col-lg-3 d-none d-lg-block mt-3 sidebar">
           <ul class="sidebar__main box d-flex flex-column p-3 p-lg-2">
             <li class="d-flex justify-content-start align-items-center">
-              <img src="assets/img/svg/Dashboard.svg" alt="" />
-              <span class="ps-2"><a href="/dashboard.html">Dashboard</a></span>
-            </li>
-            <li class="d-flex justify-content-start align-items-center">
-              <img src="assets/img/svg/Aggregator.svg" alt="" />
-              <span class="ps-2"><a href="/super_agent_dashboard.html">Super Agent</a></span>
-            </li>
-            <li class="d-flex justify-content-start align-items-center">
-              <img src="assets/img/svg/Aggregator.svg" alt="" />
-              <span class="ps-2"><a href="/aggregators.html">Aggregators</a></span>
-            </li>
-            <li class="d-flex justify-content-start align-items-center">
-              <img src="assets/img/svg/Agent.svg" alt="" />
-              <span class="ps-2"><a href="/agent.html">Agent</a></span>
+              <img src="../assets/img/svg/Dashboard.svg" alt="" />
+              <span class="ps-2"><a href="/super_agent_dashboard.html">Dashboard</a></span>
             </li>
             <li class="d-flex justify-content-start align-items-center active">
-              <img src="assets/img/svg/Terminal.svg" alt="" />
-              <span class="ps-2"><a href="/terminal.html">POS/Terminals</a></span>
+              <details>
+                <summary> <img src="../assets/img/svg/Aggregator.svg" alt="" /> Manage <img
+                    src="../assets/img/svg/ArrowDown.svg" alt="" class="arrow-down"> </summary>
+                <p class="ps-4 block pt-3"><a href="#">Agents</a></p>
+                <p class="ps-4 block"><a href="s_terminal.html">POS/Terminal</a></p>
+              </details>
             </li>
             <li class="d-flex justify-content-start align-items-center">
-              <img src="assets/img/svg/Chart.svg" alt="" />
-              <span class="ps-2"><a href="/transaction.html">Transaction History</a></span>
+              <img src="../assets/img/svg/Chart.svg" alt="" />
+              <span class="ps-2"><a href="s_transaction.html">Transaction History</a></span>
             </li>
             <li class="d-flex justify-content-start align-items-center">
-              <img src="assets/img/svg/Logout.svg" alt="" />
+              <img src="../assets/img/svg/Logout.svg" alt="" />
               <span class="ps-2">Logout</span>
             </li>
           </ul>
@@ -157,7 +147,7 @@
                 </div>
 
                 <article>
-                  <img src="assets/img/svg/Terminal.svg" alt="" />
+                  <img src="../assets/img/svg/Terminal.svg" alt="" />
                 </article>
               </div>
             </div>
@@ -171,7 +161,7 @@
                 </div>
 
                 <article>
-                  <img src="assets/img/svg/Terminal.svg" alt="" />
+                  <img src="../assets/img/svg/Terminal.svg" alt="" />
                 </article>
               </div>
             </div>
@@ -185,7 +175,7 @@
                 </div>
 
                 <article>
-                  <img src="assets/img/svg/Terminal.svg" alt="" />
+                  <img src="../assets/img/svg/Terminal.svg" alt="" />
                 </article>
               </div>
             </div>
@@ -202,7 +192,7 @@
                 </div>
 
                 <article>
-                  <img src="assets/img/svg/Terminal.svg" alt="" />
+                  <img src="../assets/img/svg/Terminal.svg" alt="" />
                 </article>
               </div>
             </div>
@@ -216,7 +206,7 @@
                     <div class="box">
                       <div class="d-flex justify-content-start align-items-center align-content-center mb-3">
                         <article class="transaction__icon">
-                          <img src="assets/img/svg/SuperAgent.svg" alt="" />
+                          <img src="../assets/img/svg/SuperAgent.svg" alt="" />
                         </article>
                         <h5 class="ms-3">Terminals Report</h5>
                       </div>
@@ -499,7 +489,7 @@
         <div class="modal-body px-3 py-2">
           <div class="d-flex justify-content-between align-items-center">
             <div>
-              <img src="assets/img/svg/SuperAgent.svg" alt="" />
+              <img src="../assets/img/svg/SuperAgent.svg" alt="" />
               <span style="font-weight: bold">Aggregator Summary</span>
             </div>
             <span class="" style="cursor: pointer" data-bs-dismiss="modal">
@@ -515,14 +505,14 @@
             <div>
               <h6>80039003</h6>
               <div class="d-flex align-items-left header-text">
-                <img src="assets/img/svg/SuperAgent.svg" alt="" />
+                <img src="../assets/img/svg/SuperAgent.svg" alt="" />
                 <span class="ps-2"> Agent ID</span>
               </div>
             </div>
             <div>
               <h6>19.00</h6>
               <div class="d-flex align-items-left header-text">
-                <img src="assets/img/svg/Transaction.svg" alt="" />
+                <img src="../assets/img/svg/Transaction.svg" alt="" />
                 <span class="ps-2"> Agent Commission</span>
               </div>
             </div>
@@ -532,14 +522,14 @@
             <div>
               <h6>SOUTH WEST</h6>
               <div class="d-flex align-items-left header-text">
-                <img src="assets/img/svg/SuperAgent.svg" alt="" />
+                <img src="../assets/img/svg/SuperAgent.svg" alt="" />
                 <span class="ps-2"> Agent Zone </span>
               </div>
             </div>
             <div>
               <h6>6,667</h6>
               <div class="d-flex align-items-left header-text">
-                <img src="assets/img/svg/Chart.svg" alt="" />
+                <img src="../assets/img/svg/Chart.svg" alt="" />
                 <span class="ps-2"> Transaction Volume</span>
               </div>
             </div>
@@ -549,14 +539,14 @@
             <div>
               <h6>2,190</h6>
               <div class="d-flex align-items-center header-text">
-                <img src="assets/img/svg/Terminal.svg" alt="" />
+                <img src="../assets/img/svg/Terminal.svg" alt="" />
                 <span class="ps-2"> Terminals Count</span>
               </div>
             </div>
             <div>
               <h6>N234,000,098.00</h6>
               <div class="d-flex align-items-center header-text">
-                <img src="assets/img/svg/Transaction.svg" alt="" />
+                <img src="../assets/img/svg/Transaction.svg" alt="" />
                 <span class="ps-2"> Transaction Value</span>
               </div>
             </div>
@@ -568,21 +558,21 @@
 
   <!-- CUSTOM JS -->
 
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/vendors/bootstrap/js/bootstrap.bundle.js"></script>
-  <script src="assets/vendors/chartjs/chart.min.js"></script>
-  <script src="assets/vendors/daterangepicker/moment.min.js"></script>
-  <script src="assets/vendors/daterangepicker/daterangepicker.js"></script>
-  <script src="assets/vendors/datatables/js/dataTables.min.js"></script>
-  <script src="assets/vendors/datatables/js/dataTables.button.min.js"></script>
-  <script src="assets/vendors/datatables/js/jszip.min.js"></script>
-  <script src="assets/vendors/datatables/js/pdfmake.min.js"></script>
-  <script src="assets/vendors/datatables/js/vfs_fonts.js"></script>
-  <script src="assets/vendors/datatables/js/buttons.html5.min.js"></script>
-  <script src="assets/vendors/datatables/js/buttons.print.min.js"></script>
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/vendors/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="../assets/vendors/chartjs/chart.min.js"></script>
+  <script src="../assets/vendors/daterangepicker/moment.min.js"></script>
+  <script src="../assets/vendors/daterangepicker/daterangepicker.js"></script>
+  <script src="../assets/vendors/datatables/js/dataTables.min.js"></script>
+  <script src="../assets/vendors/datatables/js/dataTables.button.min.js"></script>
+  <script src="../assets/vendors/datatables/js/jszip.min.js"></script>
+  <script src="../assets/vendors/datatables/js/pdfmake.min.js"></script>
+  <script src="../assets/vendors/datatables/js/vfs_fonts.js"></script>
+  <script src="../assets/vendors/datatables/js/buttons.html5.min.js"></script>
+  <script src="../assets/vendors/datatables/js/buttons.print.min.js"></script>
 
   <!-- CUSTOM IMPORT -->
-  <script src="assets/js/main.js"></script>
+  <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

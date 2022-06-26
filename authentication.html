@@ -1,43 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
 
-    <!-- BOOTSTRAP  -->
-    <link
-      rel="stylesheet"
-      href="assets/vendors/bootstrap/css/bootstrap.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
 
-    <!-- FAVICON -->
-    <link
-      rel="shortcut icon"
-      href="assets/img/svg/favicon.svg"
-      type="image/x-icon"
-    />
-    <!-- GLOBAL CSS CONFIGURATION -->
-    <link rel="stylesheet" href="assets/css/global.styles.css" />
+  <!-- BOOTSTRAP  -->
+  <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
 
-    <!-- CUSTOM CSS CONFIGURATION -->
-    <link rel="stylesheet" href="assets/css/main.styles.css" />
-  </head>
-  <body>
-    <main class="vh-100">
-      <div class="row">
-        <article
-          class="d-none d-md-flex col-md-6 vh-100 d-flex align-items-center justify-content-center flex-column login__left"
-        >
-          <img src="assets/img/images/cuate.png" alt="" />
-          <h1 class="my-5">Track your performance</h1>
-          <p class="w-75 text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ex
-            velit accusamus iure numquam ipsam sit tempora illum commodi
-            sapiente quis dolor.
-          </p>
-          <!-- <div class="position-absolute">
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="assets/img/svg/favicon.svg" type="image/x-icon" />
+  <!-- GLOBAL CSS CONFIGURATION -->
+  <link rel="stylesheet" href="assets/css/global.styles.css" />
+
+  <!-- CUSTOM CSS CONFIGURATION -->
+  <link rel="stylesheet" href="assets/css/main.styles.css" />
+
+</head>
+
+<body>
+  <main class="vh-100" style="overflow-x: hidden;">
+    <div class="row">
+      <article
+        class="d-none d-md-flex col-md-6 vh-100 d-flex align-items-center justify-content-center flex-column login__left">
+        <img src="assets/img/images/cuate.png" alt="" />
+        <h1 class="my-5">Track your performance</h1>
+        <p class="w-75 text-center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ex
+          velit accusamus iure numquam ipsam sit tempora illum commodi
+          sapiente quis dolor.
+        </p>
+        <!-- <div class="position-absolute">
             <div
               id="carouselExampleCaptions"
               class="carousel slide"
@@ -135,26 +130,21 @@
               </button>
             </div>
           </div> -->
-        </article>
-        <article
-          class="col-md-6 vh-100 d-flex flex-column justify-content-center align-items-center login__right"
-        >
-          <img src="assets/img/images/logo.png" alt="" class="w-25" />
+      </article>
+      <article class="col-md-6 vh-100 d-flex flex-column justify-content-center align-items-center login__right">
+        <img src="assets/img/images/logo.png" alt="" class="w-25" />
 
-          <div class="w-75">
-            <h3 class="mb-4 mt-5">Login to your dashboard</h3>
+        <div class="w-75">
+          <h3 class="mb-4 mt-5">Login to your dashboard</h3>
 
-            <form action="">
-              <select
-                class="form-select form-select-lg"
-                aria-label=".form-select-lg example"
-              >
-                <option selected>Select role</option>
-                <option value="1">Admin</option>
-                <option value="2">Regular User</option>
-                <option value="3">Guest</option>
-              </select>
-              <!-- <div
+          <form action="">
+            <select class="form-select form-select-lg" aria-label=".form-select-lg example">
+              <option selected>Select role</option>
+              <option value="1">Admin</option>
+              <option value="2">Regular User</option>
+              <option value="3">Guest</option>
+            </select>
+            <!-- <div
                 class="my-4 position-relative d-flex justify-content-center align-items-center"
               >
                 <input
@@ -171,83 +161,53 @@
                   ></i
                 ></span>
               </div> -->
-              <div class="input-group input-group-lg flex-nowrap my-4">
-                <input
-                  type="text"
-                  class="form-control py-2"
-                  placeholder="Email Address"
-                  aria-label="Email Address"
-                  aria-describedby="addon-wrapping"
-                />
-                <span class="input-group-text" id="addon-wrapping"
-                  ><i class="bi bi-envelope"></i
-                ></span>
-              </div>
-              <div class="input-group input-group-lg flex-nowrap my-4">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Enter your 4-digit OTP"
-                  aria-label="OTP"
-                  aria-describedby="addon-wrapping"
-                />
-                <span class="input-group-text" id="addon-wrapping"
-                  ><i class="bi bi-eye"></i
-                ></span>
-              </div>
-              <div>
-                <button
-                  class="btn btn-dark px-5 w-50 py-3"
-                  type="button"
-                  data-bs-toggle="modal"
-                  data-bs-target="#successModal"
-                >
-                  Sign in
-                </button>
-                <button type="button" class="py-3 btn btn-outline">
-                  Request new OTP
-                </button>
-              </div>
-            </form>
-          </div>
-        </article>
-      </div>
-    </main>
+            <div class="input-group input-group-lg flex-nowrap my-4">
+              <input type="text" class="form-control py-2" placeholder="Email Address" aria-label="Email Address"
+                aria-describedby="addon-wrapping" />
+              <span class="input-group-text" id="addon-wrapping"><i class="bi bi-envelope"></i></span>
+            </div>
+            <div class="input-group input-group-lg flex-nowrap my-4">
+              <input type="text" class="form-control" placeholder="Enter your 4-digit OTP" aria-label="OTP"
+                aria-describedby="addon-wrapping" />
+              <span class="input-group-text" id="addon-wrapping"><i class="bi bi-eye"></i></span>
+            </div>
+            <div>
+              <button class="btn btn-dark px-5 w-50 py-3" type="button" data-bs-toggle="modal"
+                data-bs-target="#successModal">
+                Sign in
+              </button>
+              <button type="button" class="py-3 btn btn-outline">
+                Request new OTP
+              </button>
+            </div>
+          </form>
+        </div>
+      </article>
+    </div>
+  </main>
 
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="successModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body text-center p-5">
-            <i
-              class="bi bi-check-circle"
-              style="font-size: 3rem; color: var(--green)"
-            ></i>
-            <h1 class="fw-bold">SUCCESS</h1>
-            <p class="py-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
-              magnam!
-            </p>
-            <button
-              type="button"
-              class="btn w-100 btn-lg btn-success"
-              data-bs-dismiss="modal"
-            >
-              OK
-            </button>
-          </div>
+  <!-- Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body text-center p-5">
+          <i class="bi bi-check-circle" style="font-size: 3rem; color: var(--green)"></i>
+          <h1 class="fw-bold">SUCCESS</h1>
+          <p class="py-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
+            magnam!
+          </p>
+          <button type="button" class="btn w-100 btn-lg btn-success" data-bs-dismiss="modal">
+            OK
+          </button>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Bootstrap JavaScript Bundle with Popper -->
-    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.js"></script>
-    <script src="assets/vendors/popperjspopper.min.js"></script>
-  </body>
+  <!-- Bootstrap JavaScript Bundle with Popper -->
+  <script src="assets/vendors/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="assets/vendors/popperjspopper.min.js"></script>
+</body>
+
 </html>

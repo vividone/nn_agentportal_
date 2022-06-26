@@ -1,201 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
 
-    <link
-      rel="stylesheet"
-      href="assets/vendors/bootstrap/css/bootstrap.min.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
 
-    <!-- DATERANGEPICKER -->
-    <link
-      rel="stylesheet"
-      href="assets/vendors/daterangepicker/daterangepicker.css"
-    />
+  <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
 
-    <!-- DATABASE TABLE -->
-    <link
-      href="assets/vendors/datatables/css/button.dataTables.min.css"
-      rel="stylesheet"
-      s
-    />
-    <link
-      rel="stylesheet"
-      href="assets/vendors/datatables/css/dataTables.min.css"
-    />
+  <!-- DATERANGEPICKER -->
+  <link rel="stylesheet" href="assets/vendors/daterangepicker/daterangepicker.css" />
 
-    <!-- FAVICON -->
-    <link
-      rel="shortcut icon"
-      href="assets/img/svg/favicon.svg"
-      type="image/x-icon"
-    />
+  <!-- DATABASE TABLE -->
+  <link href="assets/vendors/datatables/css/button.dataTables.min.css" rel="stylesheet" s />
+  <link rel="stylesheet" href="assets/vendors/datatables/css/dataTables.min.css" />
 
-    <!-- GLOBAL CSS CONFIGURATION -->
-    <link rel="stylesheet" href="assets/css/global.styles.css" />
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="assets/img/svg/favicon.svg" type="image/x-icon" />
 
-    <!-- CUSTOM CSS CONFIGURATION -->
-    <link rel="stylesheet" href="assets/css/main.styles.css" />
-  </head>
+  <!-- GLOBAL CSS CONFIGURATION -->
+  <link rel="stylesheet" href="assets/css/global.styles.css" />
 
-  <body>
-    <main class="" style="background-color: var(--gray)">
-      <nav class="navbar nav navbar-light navbar-expand-lg bg-light py-3 px-1">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#" class="me-5">
-            <img src="assets/img/images/logo.png" width="130" alt="" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="offcanvas offcanvas-start"
-            tabindex="-1"
-            id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel"
-          >
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-                <img src="assets/img/images/logo.png" width="130" alt="" />
-              </h5>
-              <button
-                type="button"
-                class="btn-close text-reset"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
+  <!-- CUSTOM CSS CONFIGURATION -->
+  <link rel="stylesheet" href="assets/css/main.styles.css" />
+
+</head>
+
+<body>
+  <main class="" style="background-color: var(--gray)">
+    <nav class="navbar nav navbar-light navbar-expand-lg bg-light py-3 px-1">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" class="me-5">
+          <img src="assets/img/images/logo.png" width="130" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              <img src="assets/img/images/logo.png" width="130" alt="" />
+            </h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-block ms-5"></div>
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 d-block d-lg-none">
+              <li class="nav-item nav-text">
+                <a class="nav-link" href="dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="super_agent_dashboard.html">Super Agent</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aggregators.html">Aggregators</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="terminal.html">Agent</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="terminal.html">PoS/Terminal</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="transaction.html">Transaction History</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Logout</a>
+              </li>
+            </ul>
+
+            <div class="d-flex flex-column nav__name d-none d-lg-block">
+              <h6>Harpreet Umar</h6>
+              <span>ADMIN/COO</span>
             </div>
-            <div class="offcanvas-body">
-              <div
-                class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-block ms-5"
-              ></div>
-              <ul
-                class="navbar-nav justify-content-end flex-grow-1 pe-3 d-block d-lg-none text-center"
-              >
-                <li class="nav-item nav-text">
-                  <a class="nav-link" href="dashboard.html">Dashboard</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="super_agent.html">Super Agent</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Aggregators</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">PoS/Terminal</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="transaction.html"
-                    >Transaction History</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Logout</a>
+            <div class="dropdown mx-4 d-none d-lg-block">
+              <div class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="assets/img/images/avatar.jpeg" class="avatar-img" alt="" />
+                <!-- <i class="bi bi-chevron-down"></i> -->
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Account</a>
                 </li>
               </ul>
-
-              <div class="d-flex flex-column nav__name d-none d-lg-block">
-                <h6>Harpreet Umar</h6>
-                <span>ADMIN/COO</span>
-              </div>
-              <div class="dropdown mx-4 d-none d-lg-block">
-                <div
-                  class="dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton1"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <img
-                    src="assets/img/images/avatar.jpeg"
-                    class="avatar-img"
-                    alt=""
-                  />
-                  <!-- <i class="bi bi-chevron-down"></i> -->
-                </div>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#">Profile</a></li>
-                  <li><a class="dropdown-item" href="#">Settings</a></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Account</a>
-                  </li>
-                </ul>
-              </div>
-              <div
-                class="nav__notification d-flex justify-content-center align-items-center d-none d-lg-block"
-              >
-                <i class="bi bi-bell-fill"></i>
-              </div>
-              <!-- <div
-                class="nav__logout d-flex justify-content-start align-items-center d-none d-lg-block"
-                style="cursor: pointer"
-              >
-                <img
-                  src="assets/img/svg/Logout.svg"
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="bottom"
-                  title="Logout"
-                  alt=""
-                />
-              </div> -->
+            </div>
+            <div class="nav__notification d-flex justify-content-center align-items-center d-none d-lg-block">
+              <i class="bi bi-bell-fill"></i>
             </div>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
 
-      <section class="main-container width">
-        <div class="row">
-          <aside class="col-lg-3 d-none d-lg-block mt-3 sidebar">
-            <div class="sidebar__main box d-flex flex-column p-3 p-lg-2">
-              <div
-                class="d-flex justify-content-start align-items-center active"
-              >
-                <img src="assets/img/svg/Dashboard.svg" alt="" />
-                <span class="ps-2"
-                  ><a href="/dashboard.html">Dashboard</a></span
-                >
-              </div>
-              <div class="d-flex justify-content-start align-items-center">
-                <img src="assets/img/svg/Aggregator.svg" alt="" />
-                <span class="ps-2"
-                  ><a href="/super_agent.html">Super Agent</a></span
-                >
-              </div>
-              <div class="d-flex justify-content-start align-items-center">
-                <img src="assets/img/svg/Aggregator.svg" alt="" />
-                <span class="ps-2">Aggregators</span>
-              </div>
-              <div class="d-flex justify-content-start align-items-center">
-                <img src="assets/img/svg/Agent.svg" alt="" />
-                <span class="ps-2">Agent</span>
-              </div>
-              <div class="d-flex justify-content-start align-items-center">
-                <img src="assets/img/svg/Terminal.svg" alt="" />
-                <span class="ps-2">POS/Terminals</span>
-              </div>
-              <div class="d-flex justify-content-start align-items-center">
-                <img src="assets/img/svg/Chart.svg" alt="" />
-                <span class="ps-2"
-                  ><a href="/transaction.html">Transaction History</a></span
-                >
-              </div>
-              <div class="d-flex justify-content-start align-items-center">
-                <img src="assets/img/svg/Logout.svg" alt="" />
-                <span class="ps-2">Logout</span>
-              </div>
-            </div>
+    <section class="main-container width">
+      <div class="row">
+        <aside class="col-lg-3 d-none d-lg-block mt-3 sidebar">
+          <ul class="sidebar__main box d-flex flex-column p-3 p-lg-2">
+            <li class="d-flex justify-content-start align-items-center active">
+              <img src="assets/img/svg/Dashboard.svg" alt="" />
+              <span class="ps-2"><a href="/dashboard.html">Dashboard</a></span>
+            </li>
+            <li class="d-flex justify-content-start align-items-center">
+              <img src="assets/img/svg/Aggregator.svg" alt="" />
+              <span class="ps-2"><a href="/super_agent_dashboard.html">Super Agent</a></span>
+            </li>
+            <li class="d-flex justify-content-start align-items-center">
+              <img src="assets/img/svg/Aggregator.svg" alt="" />
+              <span class="ps-2"><a href="/aggregators.html">Aggregators</a></span>
+            </li>
+            <li class="d-flex justify-content-start align-items-center">
+              <img src="assets/img/svg/Agent.svg" alt="" />
+              <span class="ps-2"><a href="/agent.html">Agent</a></span>
+            </li>
+            <li class="d-flex justify-content-start align-items-center">
+              <img src="assets/img/svg/Terminal.svg" alt="" />
+              <span class="ps-2"><a href="/terminal.html">POS/Terminals</a></span>
+            </li>
+            <li class="d-flex justify-content-start align-items-center">
+              <img src="assets/img/svg/Chart.svg" alt="" />
+              <span class="ps-2"><a href="/transaction.html">Transaction History</a></span>
+            </li>
+            <li class="d-flex justify-content-start align-items-center">
+              <img src="assets/img/svg/Logout.svg" alt="" />
+              <span class="ps-2">Logout</span>
+            </li>
+          </ul>
 
-            <!-- <div class="sidebar__main box d-flex flex-column p-4 mt-4">
+          <!-- <div class="sidebar__main box d-flex flex-column p-4 mt-4">
               <div class="d-flex justify-content-start align-items-center">
                 <img src="assets/img/svg/Chart.svg" alt="" />
 
@@ -206,271 +143,263 @@
                 <span class="ps-3">Logout</span>
               </div>
             </div> -->
-          </aside>
+        </aside>
 
-          <article class="col-lg-9 main-content">
+        <article class="col-lg-9 main-content">
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
+              <div class="box box-content position-relative header-text">
+                <span>Super Agents</span>
+                <h1>60</h1>
+                <span> <a href=""> See all super agents </a></span>
+                <div class="underline">
+                  <div></div>
+                </div>
+
+                <article>
+                  <img src="assets/img/svg/SuperAgent.svg" alt="" />
+                </article>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
+              <div class="box box-content position-relative header-text">
+                <span>Aggregators</span>
+                <h1>25</h1>
+                <span>See all aggregators</span>
+                <div class="underline">
+                  <div></div>
+                </div>
+
+                <article>
+                  <img src="assets/img/svg/Aggregator.svg" alt="" />
+                </article>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
+              <div class="box box-content position-relative header-text">
+                <span>Agents</span>
+                <h1>100</h1>
+                <span>See all agents</span>
+                <div class="underline">
+                  <div></div>
+                </div>
+
+                <article>
+                  <img src="assets/img/svg/Agent.svg" alt="" />
+                </article>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
+              <div class="box box-content position-relative header-text">
+                <span>PoS/Terminals</span>
+                <!-- <article></article> -->
+                <h1>10</h1>
+                <!-- <span>active</span> -->
+
+                <span>See all terminals</span>
+                <div class="underline">
+                  <div></div>
+                </div>
+
+                <article>
+                  <img src="assets/img/svg/Terminal.svg" alt="" />
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <section class="mt-4">
             <div class="row">
-              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
-                <div class="box box-content position-relative header-text">
-                  <span>Super Agents</span>
-                  <h1>60</h1>
-                  <span> <a href=""> See all super agents </a></span>
-                  <div class="underline">
-                    <div></div>
+              <div class="col-lg-8 h-100">
+                <div class="box mb-4">
+                  <div class="d-flex justify-content-between align-items-center flex-column flex-sm-row">
+                    <div class="d-flex align-items-center">
+                      <article class="transaction__icon">
+                        <img src="assets/img/svg/SuperAgent.svg" alt="" />
+                      </article>
+                      <h6 class="ms-3">Transaction Performance</h6>
+                    </div>
+                    <div>
+                      <input type="text" name="daterange" class="daterange" style="font-size: 0.8rem" />
+                      <div class="underline">
+                        <div></div>
+                      </div>
+                    </div>
                   </div>
 
-                  <article>
-                    <img src="assets/img/svg/SuperAgent.svg" alt="" />
-                  </article>
+                  <div>
+                    <div>
+                      <canvas id="lineChart" height="47" width="100"></canvas>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="box">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                      <article class="transaction__icon">
+                        <img src="assets/img/svg/SuperAgent.svg" alt="" />
+                      </article>
+                      <h6 class="ms-3">Zonal Performance</h6>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div>
+                      <canvas id="barChart" width="100" height="45"></canvas>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
-                <div class="box box-content position-relative header-text">
-                  <span>Aggregators</span>
-                  <h1>25</h1>
-                  <span>See all aggregators</span>
-                  <div class="underline">
-                    <div></div>
+              <div class="col-lg-4 mt-sm-4 mt-lg-0">
+                <div class="row gy-3">
+                  <div class="col-lg-12 col-sm-6">
+                    <div class="box">
+                      <div class="d-flex justify-content-start align-items-center mb-2">
+                        <article class="transaction__icon">
+                          <img src="assets/img/svg/Terminal.svg" alt="" />
+                        </article>
+                        <h6 class="ms-3">Terminal Status</h6>
+                      </div>
+                      <div class="">
+                        <canvas id="doughnutChart"></canvas>
+                      </div>
+                    </div>
                   </div>
-
-                  <article>
-                    <img src="assets/img/svg/Aggregator.svg" alt="" />
-                  </article>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
-                <div class="box box-content position-relative header-text">
-                  <span>Agents</span>
-                  <h1>100</h1>
-                  <span>See all agents</span>
-                  <div class="underline">
-                    <div></div>
+                  <div class="col-lg-12 col-sm-6">
+                    <div class="box">
+                      <div class="d-flex justify-content-start align-items-center mb-2">
+                        <article class="transaction__icon">
+                          <img src="assets/img/svg/Terminal.svg" alt="" />
+                        </article>
+                        <h6 class="ms-3">Status</h6>
+                      </div>
+                      <div class="">
+                        <canvas id="doughnutChart2"></canvas>
+                      </div>
+                    </div>
                   </div>
-
-                  <article>
-                    <img src="assets/img/svg/Agent.svg" alt="" />
-                  </article>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 mt-3">
-                <div class="box box-content position-relative header-text">
-                  <span>PoS/Terminals</span>
-                  <!-- <article></article> -->
-                  <h1>10</h1>
-                  <!-- <span>active</span> -->
-
-                  <span>See all terminals</span>
-                  <div class="underline">
-                    <div></div>
-                  </div>
-
-                  <article>
-                    <img src="assets/img/svg/Terminal.svg" alt="" />
-                  </article>
                 </div>
               </div>
             </div>
+          </section>
 
-            <section class="mt-4">
-              <div class="row">
-                <div class="col-lg-8 h-100">
-                  <div class="box mb-4">
-                    <div
-                      class="d-flex justify-content-between align-items-center flex-column flex-sm-row"
-                    >
-                      <div class="d-flex align-items-center">
+          <section class="">
+            <div class="row">
+              <div class="col-lg-12 mt-4">
+                <div class="row gy-4">
+                  <div class="col-md-6">
+                    <div class="box">
+                      <div class="d-flex justify-content-start align-items-center mb-2">
                         <article class="transaction__icon">
                           <img src="assets/img/svg/SuperAgent.svg" alt="" />
                         </article>
-                        <h6 class="ms-3">Transaction Performance</h6>
+                        <h6 class="ms-3">Transactions</h6>
                       </div>
-                      <div>
-                        <input
-                          type="text"
-                          name="daterange"
-                          class="daterange"
-                          style="font-size: 0.8rem"
-                        />
-                        <div class="underline">
-                          <div></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div>
-                      <div>
-                        <canvas id="lineChart" height="47" width="100"></canvas>
+                      <div class="table-responsive">
+                        <table id="" class="table table-responsive">
+                          <thead>
+                            <tr>
+                              <th>Entity ID</th>
+                              <th>Agent Name</th>
+                              <th>Value (N)</th>
+                              <th>Transaction Date</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1234</td>
+                              <td>Caleb Exchange</td>
+                              <td>65,700.00</td>
+                              <td>28h, May 200</td>
+                            </tr>
+                            <tr>
+                              <td>1234</td>
+                              <td>John Exchange</td>
+                              <td>75,700.00</td>
+                              <td>28h, May 200</td>
+                            </tr>
+                            <tr>
+                              <td>1234</td>
+                              <td>John Exchange</td>
+                              <td>85,700.00</td>
+                              <td>28h, May 200</td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </div>
                   </div>
-
-                  <div class="box">
-                    <div
-                      class="d-flex justify-content-between align-items-center"
-                    >
-                      <div class="d-flex align-items-center">
+                  <div class="col-md-6">
+                    <div class="box">
+                      <div class="d-flex justify-content-start align-items-center mb-2">
                         <article class="transaction__icon">
                           <img src="assets/img/svg/SuperAgent.svg" alt="" />
                         </article>
-                        <h6 class="ms-3">Zonal Performance</h6>
+                        <h6 class="ms-3">Best Performing Agents</h6>
                       </div>
-                    </div>
-
-                    <div>
-                      <div>
-                        <canvas id="barChart" width="100" height="45"></canvas>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4 mt-sm-4 mt-lg-0">
-                  <div class="row gy-3">
-                    <div class="col-lg-12 col-sm-6">
-                      <div class="box">
-                        <div
-                          class="d-flex justify-content-start align-items-center mb-2"
-                        >
-                          <article class="transaction__icon">
-                            <img src="assets/img/svg/Terminal.svg" alt="" />
-                          </article>
-                          <h6 class="ms-3">Terminal Status</h6>
-                        </div>
-                        <div class="">
-                          <canvas id="doughnutChart"></canvas>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-12 col-sm-6">
-                      <div class="box">
-                        <div
-                          class="d-flex justify-content-start align-items-center mb-2"
-                        >
-                          <article class="transaction__icon">
-                            <img src="assets/img/svg/Terminal.svg" alt="" />
-                          </article>
-                          <h6 class="ms-3">Status</h6>
-                        </div>
-                        <div class="">
-                          <canvas id="doughnutChart2"></canvas>
-                        </div>
+                      <div class="table-responsive">
+                        <table id="" class="table">
+                          <thead>
+                            <tr>
+                              <th>Parent ID</th>
+                              <th>Total Transaction Value</th>
+                            </tr>
+                          </thead>
+                          <tbody class="t2">
+                            <tr>
+                              <td>1234567890</td>
+                              <td>17,928,374.00</td>
+                            </tr>
+                            <tr>
+                              <td>1234567890</td>
+                              <td>1234</td>
+                            </tr>
+                            <tr>
+                              <td>1234567890</td>
+                              <td>17,928,374.00</td>
+                            </tr>
+                            <tr>
+                              <td>1234567890</td>
+                              <td>17,928,374.00</td>
+                            </tr>
+                            <tr>
+                              <td>1234567890</td>
+                              <td>17,928,374.00</td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </section>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="p-4 text-center">
+    <span>Powered by: NowNow Digital Systems,
+      <script>
+        document.write(new Date().getFullYear());
+      </script>
+    </span>
+  </footer>
 
-            <section class="mt-4">
-              <div class="row">
-                <div class="col-lg-12 mt-4">
-                  <div class="row gy-4">
-                    <div class="col-md-6">
-                      <div class="box">
-                        <div
-                          class="d-flex justify-content-start align-items-center mb-2"
-                        >
-                          <article class="transaction__icon">
-                            <img src="assets/img/svg/SuperAgent.svg" alt="" />
-                          </article>
-                          <h6 class="ms-3">Transactions</h6>
-                        </div>
-                        <div class="table-responsive">
-                          <table id="" class="table table-responsive">
-                            <thead>
-                              <tr>
-                                <th>Entity ID</th>
-                                <th>Agent Name</th>
-                                <th>Value (N)</th>
-                                <th>Transaction Date</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td>1234</td>
-                                <td>Caleb Exchange</td>
-                                <td>65,700.00</td>
-                                <td>28h, May 200</td>
-                              </tr>
-                              <tr>
-                                <td>1234</td>
-                                <td>John Exchange</td>
-                                <td>75,700.00</td>
-                                <td>28h, May 200</td>
-                              </tr>
-                              <tr>
-                                <td>1234</td>
-                                <td>John Exchange</td>
-                                <td>85,700.00</td>
-                                <td>28h, May 200</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="box">
-                        <div
-                          class="d-flex justify-content-start align-items-center mb-2"
-                        >
-                          <article class="transaction__icon">
-                            <img src="assets/img/svg/SuperAgent.svg" alt="" />
-                          </article>
-                          <h6 class="ms-3">Best Performing Agents</h6>
-                        </div>
-                        <div class="table-responsive">
-                          <table id="" class="table">
-                            <thead>
-                              <tr>
-                                <th>Parent ID</th>
-                                <th>Total Transaction Value</th>
-                              </tr>
-                            </thead>
-                            <tbody class="t2">
-                              <tr>
-                                <td>1234</td>
-                                <td>17,928,374.00</td>
-                              </tr>
-                              <tr>
-                                <td>1234</td>
-                                <td>1234</td>
-                              </tr>
-                              <tr>
-                                <td>1234</td>
-                                <td>17,928,374.00</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </article>
-        </div>
-      </section>
-    </main>
-    <footer class="p-4 text-center">
-      <span
-        >Powered by: NowNow Digital Systems,
-        <script>
-          document.write(new Date().getFullYear());
-        </script>
-      </span>
-    </footer>
+  <!-- CUSTOM JS -->
 
-    <!-- CUSTOM JS -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/vendors/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="assets/vendors/chartjs/chart.min.js"></script>
+  <script src="assets/vendors/daterangepicker/moment.min.js"></script>
+  <script src="assets/vendors/daterangepicker/daterangepicker.js"></script>
+  <script src="assets/vendors/datatables/js/dataTables.min.js"></script>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.js"></script>
-    <script src="assets/vendors/chartjs/chart.min.js"></script>
-    <script src="assets/vendors/daterangepicker/moment.min.js"></script>
-    <script src="assets/vendors/daterangepicker/daterangepicker.js"></script>
-    <script src="assets/vendors/datatables/js/dataTables.min.js"></script>
+  <!-- CUSTOM IMPORT -->
+  <script src="assets/js/main.js"></script>
 
-    <!-- CUSTOM IMPORT -->
-    <script src="assets/js/main.js"></script>
-  </body>
+</body>
+
 </html>

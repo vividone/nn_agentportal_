@@ -56,7 +56,6 @@ a:active {
 .active {
   font-weight: 500;
   background-color: rgba(254, 165, 11, 0.459);
-;
 }
 
 summary {
@@ -66,4 +65,26 @@ summary {
 footer {
   font-weight: 500;
   max-height: fit-content;
+}
+
+.nav-item:hover {
+  background-color: var(--yellow);
+}
+
+.nav-item {
+  border-bottom: 1px solid var(--gray);
+  margin: 10px;
+  padding-left: 20px;
+  text-align: left !important;
+}
+
+.dropdown-menu {
+  border: none;
+  width: 110%;
+  margin-left: -25px;
+  padding-left: 20px;
+}
+
+.dropdown-menu li {
+  margin-bottom: 10px;
 }

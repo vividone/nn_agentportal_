@@ -15,19 +15,12 @@ $('input[name="daterange"]').daterangepicker({
       moment().subtract(1, "month").endOf("month"),
     ],
   },
-});
+})
 
 // ---------------- CHART JS -----------------------------
 
 // LINE CHART
-const lineChartLabels = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-];
+const lineChartLabels = ["January", "February", "March", "April", "May", "June"]
 
 const lineChartData = {
   labels: lineChartLabels,
@@ -39,7 +32,7 @@ const lineChartData = {
       data: [100000, 250000, 350005, 2879000, 2700000, 756443, 450000],
     },
   ],
-};
+}
 
 const lineChartConfig = {
   type: "line",
@@ -47,10 +40,10 @@ const lineChartConfig = {
   options: {
     maintainAspectRatio: true,
   },
-};
+}
 
 // RENDER THE CHART
-const lineChart = new Chart($("#lineChart"), lineChartConfig);
+const lineChart = new Chart($("#lineChart"), lineChartConfig)
 
 // DOUGHNUT CHART
 
@@ -62,7 +55,7 @@ const doughnutChartData = {
       data: [300, 100],
     },
   ],
-};
+}
 
 const doughnitChartConfig = {
   type: "doughnut",
@@ -76,10 +69,10 @@ const doughnitChartConfig = {
       },
     },
   },
-};
+}
 
 // RENDER THE CHART
-const doughnutChart = new Chart($("#doughnutChart"), doughnitChartConfig);
+const doughnutChart = new Chart($("#doughnutChart"), doughnitChartConfig)
 
 // SECOND DOUGHNUT CHART
 const doughnutChartData2 = {
@@ -96,7 +89,7 @@ const doughnutChartData2 = {
       data: [300, 100, 200, 175],
     },
   ],
-};
+}
 
 const doughnitChartConfig2 = {
   type: "doughnut",
@@ -110,10 +103,10 @@ const doughnitChartConfig2 = {
       },
     },
   },
-};
+}
 
 // RENDER THE CHART
-const doughnutChart2 = new Chart($("#doughnutChart2"), doughnitChartConfig2);
+const doughnutChart2 = new Chart($("#doughnutChart2"), doughnitChartConfig2)
 
 // BAR CHART CONFIGURATION
 
@@ -124,7 +117,7 @@ const barChartLabels = [
   "South East",
   "North East",
   "North Central",
-];
+]
 
 const barChartData = {
   labels: barChartLabels,
@@ -151,7 +144,7 @@ const barChartData = {
       borderWidth: 1,
     },
   ],
-};
+}
 
 const barChartConfig = {
   type: "bar",
@@ -164,20 +157,26 @@ const barChartConfig = {
     },
     responsive: true,
   },
-};
+}
 
 // RENDER THE CHART
-const barChart = new Chart($("#barChart"), barChartConfig);
+const barChart = new Chart($("#barChart"), barChartConfig)
 
 // ---------------- DATA TABLES -----------------------------
 $("#table_id").DataTable({
   searching: true,
   scrollY: 400,
-});
+})
 
 $("#table_id2").DataTable({
   searching: true,
   paging: true,
-  dom: "lBfrtip",
+  dom: "Bfrtip",
   buttons: ["pdf", "print", "csv", "excel", "export"],
-});
+})
+
+// FOR NAVIGATION BAR
+// const btn = $(".dd")
+// btn.click(() => {
+//   $(".dp").hide()
+// })

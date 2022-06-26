@@ -132,10 +132,10 @@
   height: 100%;
 }
 
-.sidebar__main > div {
+.sidebar__main > li {
   padding: 1rem;
 }
-.sidebar__main > div:hover {
+.sidebar__main > li:hover {
   background-color: rgb(241, 241, 241);
   cursor: pointer;
   font-weight: bold;
