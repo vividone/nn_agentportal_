@@ -88,3 +88,7 @@ footer {
 .dropdown-menu li {
   margin-bottom: 10px;
 }
+
+.dropdown-item:hover {
+  width: 70% !important;
+}

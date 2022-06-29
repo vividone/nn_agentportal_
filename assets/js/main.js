@@ -166,6 +166,17 @@ const barChart = new Chart($("#barChart"), barChartConfig)
 $("#table_id").DataTable({
   searching: true,
   scrollY: 400,
+  paging: true,
+  dom: "Bfrtip",
+  buttons: ["pdf", "print", "csv", "excel", "export"],
+})
+
+$("#table_id3").DataTable({
+  searching: true,
+  scrollY: 400,
+  paging: true,
+  dom: "Bfrtip",
+  buttons: ["pdf", "print", "csv", "excel", "export"],
 })
 
 $("#table_id2").DataTable({

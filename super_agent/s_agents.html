@@ -1,96 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agent</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Agent</title>
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/bootstrap/css/bootstrap.min.css"
+    />
 
-  <link rel="stylesheet" href="../assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <!-- DATERANGEPICKER -->
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/daterangepicker/daterangepicker.css"
+    />
 
-  <!-- DATERANGEPICKER -->
-  <link rel="stylesheet" href="../assets/vendors/daterangepicker/daterangepicker.css" />
+    <!-- DATABASE TABLE -->
+    <link
+      href="../assets/vendors/datatables/css/button.dataTables.min.css"
+      rel="stylesheet"
+      s
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/vendors/datatables/css/dataTables.min.css"
+    />
 
-  <!-- DATABASE TABLE -->
-  <link href="../assets/vendors/datatables/css/button.dataTables.min.css" rel="stylesheet" s />
-  <link rel="stylesheet" href="../assets/vendors/datatables/css/dataTables.min.css" />
+    <!-- FAVICON -->
+    <link
+      rel="shortcut icon"
+      href="../assets/img/svg/favicon.svg"
+      type="image/x-icon"
+    />
 
-  <!-- FAVICON -->
-  <link rel="shortcut icon" href="../assets/img/svg/favicon.svg" type="image/x-icon" />
+    <!-- GLOBAL CSS CONFIGURATION -->
+    <link rel="stylesheet" href="../assets/css/global.styles.css" />
 
-  <!-- GLOBAL CSS CONFIGURATION -->
-  <link rel="stylesheet" href="../assets/css/global.styles.css" />
+    <!-- CUSTOM CSS CONFIGURATION -->
+    <link rel="stylesheet" href="../assets/css/main.styles.css" />
+  </head>
 
-  <!-- CUSTOM CSS CONFIGURATION -->
-  <link rel="stylesheet" href="../assets/css/main.styles.css" />
-</head>
-
-<body>
-  <main class="" style="background-color: var(--gray)">
-    <nav class="navbar nav navbar-light navbar-expand-lg bg-light py-4 px-1">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#" class="me-5">
-          <img src="../assets/img/images/logo.png" width="130" alt="" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
-              <img src="../assets/img/images/logo.png" width="130" alt="" />
-            </h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <div class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-block ms-5"></div>
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 d-block d-lg-none">
-              <li class="nav-item nav-text">
-                <a class="nav-link" href="../super_agent_dashboard.html">Dashboard</a>
-              </li>
-              <li class="nav-item dd dropdown">
-                <a class="nav-link dropdown-toggle onclick" href="#" id="navbarDarkDropdownMenuLink" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  Manage
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
-                  <li><a class="dropdown-item" href="super_agent/s_agents.html">Agents</a></li>
-                  <li><a class="dropdown-item" href="super_agent/s_terminal.html">POS/Terminals</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="super_agent/s_transaction.html">Transaction History</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Logout</a>
-              </li>
-            </ul>
-
-            <div class="d-flex flex-column nav__name d-none d-lg-block">
-              <h6>Harpreet Umar</h6>
-              <span>ADMIN/COO</span>
+  <body>
+    <main class="" style="background-color: var(--gray)">
+      <nav class="navbar nav navbar-light navbar-expand-lg bg-light py-4 px-1">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" class="me-5">
+            <img src="../assets/img/images/logo.png" width="130" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <img src="../assets/img/images/logo.png" width="130" alt="" />
+              </h5>
+              <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
             </div>
-            <div class="dropdown mx-4 d-none d-lg-block">
-              <div class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                <img src="../assets/img/images/avatar.jpeg" class="avatar-img" alt="" />
-                <!-- <i class="bi bi-chevron-down"></i> -->
-              </div>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Settings</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Account</a>
+            <div class="offcanvas-body">
+              <div
+                class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-lg-block ms-5"
+              ></div>
+              <ul
+                class="navbar-nav justify-content-end flex-grow-1 pe-3 d-block d-lg-none"
+              >
+                <li class="nav-item nav-text">
+                  <a class="nav-link" href="../super_agent_dashboard.html"
+                    >Dashboard</a
+                  >
+                </li>
+                <li class="nav-item dd dropdown">
+                  <a
+                    class="nav-link dropdown-toggle onclick"
+                    href="#"
+                    id="navbarDarkDropdownMenuLink"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Manage
+                  </a>
+                  <ul
+                    class="dropdown-menu"
+                    aria-labelledby="navbarDarkDropdownMenuLink"
+                  >
+                    <li>
+                      <a class="dropdown-item" href="super_agent/s_agents.html"
+                        >Agents</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="super_agent/s_terminal.html"
+                        >POS/Terminals</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="super_agent/s_transaction.html"
+                    >Transaction History</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Logout</a>
                 </li>
               </ul>
-            </div>
-            <div class="nav__notification d-flex justify-content-center align-items-center d-none d-lg-block">
-              <i class="bi bi-bell-fill"></i>
-            </div>
-            <!-- <div
+
+              <div class="d-flex flex-column nav__name d-none d-lg-block">
+                <h6>Harpreet Umar</h6>
+                <span>ADMIN/COO</span>
+              </div>
+              <div class="dropdown mx-4 d-none d-lg-block">
+                <div
+                  class="dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="../assets/img/images/avatar.jpeg"
+                    class="avatar-img"
+                    alt=""
+                  />
+                  <!-- <i class="bi bi-chevron-down"></i> -->
+                </div>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Account</a>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="nav__notification d-flex justify-content-center align-items-center d-none d-lg-block"
+              >
+                <i class="bi bi-bell-fill"></i>
+              </div>
+              <!-- <div
                 class="nav__logout d-flex justify-content-start align-items-center d-none d-lg-block"
                 style="cursor: pointer"
               >
@@ -102,38 +170,79 @@
                   alt=""
                 />
               </div> -->
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
-    <section class="main-container width">
-      <div class="row">
-        <aside class="col-lg-3 d-none d-lg-block mt-3 sidebar">
-          <ul class="sidebar__main box d-flex flex-column p-3 p-lg-2">
-            <li class="d-flex justify-content-start align-items-center">
-              <img src="../assets/img/svg/Dashboard.svg" alt="" />
-              <span class="ps-2"><a href="/super_agent_dashboard.html">Dashboard</a></span>
-            </li>
-            <li class="d-flex justify-content-start align-items-center active">
+      <section class="main-container width">
+        <div class="row">
+          <aside class="col-lg-3 d-none d-lg-block mt-3 sidebar">
+            <ul class="sidebar__main box d-flex flex-column p-3 p-lg-2">
+              <li class="d-flex justify-content-start align-items-center">
+                <img src="../assets/img/svg/Dashboard.svg" alt="" />
+                <span class="ps-2"
+                  ><a href="/super_agent_dashboard.html">Dashboard</a></span
+                >
+              </li>
+              <!-- <li class="d-flex justify-content-start align-items-center active">
               <details>
                 <summary> <img src="../assets/img/svg/Aggregator.svg" alt="" /> Manage <img
                     src="../assets/img/svg/ArrowDown.svg" alt="" class="arrow-down"> </summary>
                 <p class="ps-4 block pt-3"><a href="#">Agents</a></p>
                 <p class="ps-4 block"><a href="s_terminal.html">POS/Terminal</a></p>
               </details>
-            </li>
-            <li class="d-flex justify-content-start align-items-center">
-              <img src="../assets/img/svg/Chart.svg" alt="" />
-              <span class="ps-2"><a href="s_transaction.html">Transaction History</a></span>
-            </li>
-            <li class="d-flex justify-content-start align-items-center">
-              <img src="../assets/img/svg/Logout.svg" alt="" />
-              <span class="ps-2">Logout</span>
-            </li>
-          </ul>
+            </li> -->
+              <li class="" style="list-style: none">
+                <details open>
+                  <summary>
+                    <img src=" ../assets/img/svg/Aggregator.svg" alt="" />
+                    Manage
+                    <img
+                      src="../assets/img/svg/ArrowDown.svg"
+                      alt=""
+                      class="arrow-down"
+                    />
+                  </summary>
+                  <ul>
+                    <li
+                      class="ps-4 block py-3 my-3 d-flex justify-content-start width align-items-center active"
+                      style="list-style: none"
+                    >
+                      <a href="#">
+                        <img src="../assets/img/svg/Agent.svg" alt="" />
+                        Agents</a
+                      >
+                    </li>
+                    <li
+                      class="ps-4 block d-flex justify-content-start align-items-center"
+                    >
+                      <a href="s_terminal.html">
+                        <img src="../assets/img/svg/Terminal.svg" alt="" />
+                        POS/Terminal</a
+                      >
+                    </li>
+                  </ul>
+                  <!-- <span class="ps-4 block py-3 my-3 d-flex justify-content-start width align-items-center active"><a
+                    href="#"> <img src="../assets/img/svg/Agent.svg" alt="" /> Agents</a>
+                </span>
+                <span class="ps-4 block d-flex justify-content-start align-items-center"><a href="s_terminal.html"> <img
+                      src="../assets/img/svg/Terminal.svg" alt="" /> POS/Terminal</a></span> -->
+                </details>
+              </li>
+              <li class="d-flex justify-content-start align-items-center">
+                <img src="../assets/img/svg/Chart.svg" alt="" />
+                <span class="ps-2"
+                  ><a href="s_transaction.html">Transaction History</a></span
+                >
+              </li>
+              <li class="d-flex justify-content-start align-items-center">
+                <img src="../assets/img/svg/Logout.svg" alt="" />
+                <span class="ps-2">Logout</span>
+              </li>
+            </ul>
 
-          <!-- <div class="sidebar__main box d-flex flex-column p-4 mt-4">
+            <!-- <div class="sidebar__main box d-flex flex-column p-4 mt-4">
               <div class="d-flex justify-content-start align-items-center">
                 <img src="../assets/img/svg/Chart.svg" alt="" />
 
@@ -144,42 +253,56 @@
                 <span class="ps-3">Logout</span>
               </div>
             </div> -->
-        </aside>
+          </aside>
 
-        <article class="col-lg-9 main-content">
-          <div class="row">
-            <div class="col-lg-12 mt-3">
-              <div class="box box-content position-relative">
-                <div class="d-flex justify-content-start align-items-center mb-2">
-                  <article class="transaction__icon">
-                    <img src="../assets/img/svg/SuperAgent.svg" alt="" />
-                  </article>
-                  <h6 class="ms-3">Customise your report</h6>
-                </div>
+          <article class="col-lg-9 main-content">
+            <div class="row">
+              <div class="col-lg-12 mt-3">
+                <div class="box box-content position-relative">
+                  <div
+                    class="d-flex justify-content-start align-items-center mb-2"
+                  >
+                    <article class="transaction__icon">
+                      <img src="../assets/img/svg/SuperAgent.svg" alt="" />
+                    </article>
+                    <h6 class="ms-3">Customise your report</h6>
+                  </div>
 
-                <div>
-                  <div class="">
-                    <div class="row">
-                      <div class="col-lg-11">
-                        <div class="row">
-                          <div class="col-lg-5 col-md-6">
-                            <div class="my-3">
-                              <input type="text" name="daterange" class="form-select" style="font-size: 0.9rem" />
+                  <div>
+                    <div class="">
+                      <div class="row">
+                        <div class="col-lg-11">
+                          <div class="row">
+                            <div class="col-lg-5 col-md-6">
+                              <div class="my-3">
+                                <input
+                                  type="text"
+                                  name="daterange"
+                                  class="form-select"
+                                  style="font-size: 0.9rem"
+                                />
+                              </div>
                             </div>
-                          </div>
-                          <div class="col-lg-3 col-md-6">
-                            <div class="my-3">
-                              <select class="form-select" aria-label="Default select example">
-                                <option selected>Zone</option>
-                                <option value="1">North West</option>
-                                <option value="2">South South</option>
-                                <option value="3">South East</option>
-                              </select>
+                            <div class="col-lg-3 col-md-6">
+                              <div class="my-3">
+                                <select
+                                  class="form-select"
+                                  aria-label="Default select example"
+                                >
+                                  <option selected>Zone</option>
+                                  <option value="1">North West</option>
+                                  <option value="2">South South</option>
+                                  <option value="3">South East</option>
+                                </select>
+                              </div>
                             </div>
-                          </div>
-                          <div class="col-lg-1 my-3">
-                            <div>
-                              <img src="../assets/img/svg/Search.svg" alt="" />
+                            <div class="col-lg-1 my-3">
+                              <div>
+                                <img
+                                  src="../assets/img/svg/Search.svg"
+                                  alt=""
+                                />
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -189,467 +312,641 @@
                 </div>
               </div>
             </div>
-          </div>
 
-          <section class="">
-            <div class="row">
-              <div class="col-lg-12 mt-4">
-                <div class="row gy-4">
-                  <div class="col-md-12">
-                    <div class="box">
-                      <div class="d-flex justify-content-between align-items-center mb-3 flex-column flex-md-row">
-                        <div class="d-flex justify-content-start align-items-center mb-3">
-                          <article class="transaction__icon">
-                            <img src="../assets/img/svg/Transaction.svg" alt="" />
-                          </article>
-                          <h5 class="ms-3">Agent Reports</h5>
-                        </div>
+            <section class="">
+              <div class="row">
+                <div class="col-lg-12 mt-4">
+                  <div class="row gy-4">
+                    <div class="col-md-12">
+                      <div class="box">
+                        <div
+                          class="d-flex justify-content-between align-items-center mb-3 flex-column flex-md-row"
+                        >
+                          <div
+                            class="d-flex justify-content-start align-items-center mb-3"
+                          >
+                            <article class="transaction__icon">
+                              <img
+                                src="../assets/img/svg/Transaction.svg"
+                                alt=""
+                              />
+                            </article>
+                            <h5 class="ms-3">Agent Reports</h5>
+                          </div>
 
-                        <div>
-                          <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#agentModal">Add New
-                            Agent</button>
+                          <div>
+                            <button
+                              class="btn btn-warning"
+                              data-bs-toggle="modal"
+                              data-bs-target="#agentModal"
+                            >
+                              Add New Agent
+                            </button>
+                          </div>
                         </div>
-                      </div>
-                      <div class="table-responsive">
-                        <table id="table_id" class="display table table-striped">
-                          <thead class="thead">
-                            <tr>
-                              <th>S/N</th>
-                              <th>Entity ID</th>
-                              <th>Agent Name</th>
-                              <th>Transaction ID</th>
-                              <th>Transaction Date</th>
-                              <th>Transaction Value</th>
-                              <th>Zone</th>
-                              <th>Opening Balance</th>
-                              <th>Closing Balance</th>
-                            </tr>
-                          </thead>
-                          <tbody class="table-items">
-                            <tr>
-                              <td>1</td>
-                              <td>654560978890</td>
-                              <td>MARITECH GLOBAL RESOURCES</td>
-                              <td>654560978890</td>
-                              <td>07 June 2022</td>
-                              <td>₦ 60,000.00</td>
-                              <td>NORTH WEST</td>
-                              <td>450,090,890.00</td>
-                              <td>450,090,890.00</td>
-                            </tr>
-                            <tr>
-                              <td>2</td>
-                              <td>654560978890</td>
-                              <td>MARITECH GLOBAL RESOURCES</td>
-                              <td>654560978890</td>
-                              <td>07 June 2022</td>
-                              <td>₦ 60,000.00</td>
-                              <td>NORTH WEST</td>
-                              <td>450,090,890.00</td>
-                              <td>450,090,890.00</td>
-                            </tr>
-                            <tr>
-                              <td>3</td>
-                              <td>654560978890</td>
-                              <td>MARITECH GLOBAL RESOURCES</td>
-                              <td>654560978890</td>
-                              <td>07 June 2022</td>
-                              <td>₦ 60,000.00</td>
-                              <td>NORTH WEST</td>
-                              <td>450,090,890.00</td>
-                              <td>450,090,890.00</td>
-                            </tr>
-                            <tr>
-                              <td>4</td>
-                              <td>654560978890</td>
-                              <td>MARITECH GLOBAL RESOURCES</td>
-                              <td>654560978890</td>
-                              <td>07 June 2022</td>
-                              <td>₦ 60,000.00</td>
-                              <td>NORTH WEST</td>
-                              <td>450,090,890.00</td>
-                              <td>450,090,890.00</td>
-                            </tr>
-                            <tr>
-                              <td>5</td>
-                              <td>654560978890</td>
-                              <td>MARITECH GLOBAL RESOURCES</td>
-                              <td>654560978890</td>
-                              <td>07 June 2022</td>
-                              <td>₦ 60,000.00</td>
-                              <td>NORTH WEST</td>
-                              <td>450,090,890.00</td>
-                              <td>450,090,890.00</td>
-                            </tr>
-                            <tr>
-                              <td>6</td>
-                              <td>654560978890</td>
-                              <td>MARITECH GLOBAL RESOURCES</td>
-                              <td>654560978890</td>
-                              <td>07 June 2022</td>
-                              <td>₦ 60,000.00</td>
-                              <td>NORTH WEST</td>
-                              <td>450,090,890.00</td>
-                              <td>450,090,890.00</td>
-                            </tr>
-                            <tr>
-                              <td>7</td>
-                              <td>654560978890</td>
-                              <td>MARITECH GLOBAL RESOURCES</td>
-                              <td>654560978890</td>
-                              <td>07 June 2022</td>
-                              <td>₦ 60,000.00</td>
-                              <td>NORTH WEST</td>
-                              <td>450,090,890.00</td>
-                              <td>450,090,890.00</td>
-                            </tr>
-                            <tr>
-                              <td>8</td>
-                              <td>654560978890</td>
-                              <td>MARITECH GLOBAL RESOURCES</td>
-                              <td>654560978890</td>
-                              <td>07 June 2022</td>
-                              <td>₦ 60,000.00</td>
-                              <td>NORTH WEST</td>
-                              <td>450,090,890.00</td>
-                              <td>450,090,890.00</td>
-                            </tr>
-                            <tr>
-                              <td>9</td>
-                              <td>654560978890</td>
-                              <td>MARITECH GLOBAL RESOURCES</td>
-                              <td>654560978890</td>
-                              <td>07 June 2022</td>
-                              <td>₦ 60,000.00</td>
-                              <td>NORTH WEST</td>
-                              <td>450,090,890.00</td>
-                              <td>450,090,890.00</td>
-                            </tr>
-                            <tr>
-                              <td>10</td>
-                              <td>654560978890</td>
-                              <td>MARITECH GLOBAL RESOURCES</td>
-                              <td>654560978890</td>
-                              <td>07 June 2022</td>
-                              <td>₦ 60,000.00</td>
-                              <td>NORTH WEST</td>
-                              <td>450,090,890.00</td>
-                              <td>450,090,890.00</td>
-                            </tr>
-                          </tbody>
-                        </table>
+                        <div class="table-responsive">
+                          <table
+                            id="table_id"
+                            class="display table table-striped"
+                          >
+                            <thead class="thead">
+                              <tr>
+                                <th>S/N</th>
+                                <th>Entity ID</th>
+                                <th>Agent Name</th>
+                                <th>Transaction ID</th>
+                                <th>Transaction Date</th>
+                                <th>Transaction Value</th>
+                                <th>Zone</th>
+                                <th>Opening Balance</th>
+                                <th>Closing Balance</th>
+                              </tr>
+                            </thead>
+                            <tbody class="table-items">
+                              <tr>
+                                <td>1</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
+                                <td>450,090,890.00</td>
+                                <td>450,090,890.00</td>
+                              </tr>
+                              <tr>
+                                <td>2</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
+                                <td>450,090,890.00</td>
+                                <td>450,090,890.00</td>
+                              </tr>
+                              <tr>
+                                <td>3</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
+                                <td>450,090,890.00</td>
+                                <td>450,090,890.00</td>
+                              </tr>
+                              <tr>
+                                <td>4</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
+                                <td>450,090,890.00</td>
+                                <td>450,090,890.00</td>
+                              </tr>
+                              <tr>
+                                <td>5</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
+                                <td>450,090,890.00</td>
+                                <td>450,090,890.00</td>
+                              </tr>
+                              <tr>
+                                <td>6</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
+                                <td>450,090,890.00</td>
+                                <td>450,090,890.00</td>
+                              </tr>
+                              <tr>
+                                <td>7</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
+                                <td>450,090,890.00</td>
+                                <td>450,090,890.00</td>
+                              </tr>
+                              <tr>
+                                <td>8</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
+                                <td>450,090,890.00</td>
+                                <td>450,090,890.00</td>
+                              </tr>
+                              <tr>
+                                <td>9</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
+                                <td>450,090,890.00</td>
+                                <td>450,090,890.00</td>
+                              </tr>
+                              <tr>
+                                <td>10</td>
+                                <td>654560978890</td>
+                                <td>MARITECH GLOBAL RESOURCES</td>
+                                <td>654560978890</td>
+                                <td>07 June 2022</td>
+                                <td>₦ 60,000.00</td>
+                                <td>NORTH WEST</td>
+                                <td>450,090,890.00</td>
+                                <td>450,090,890.00</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
-        </article>
-      </div>
-    </section>
-  </main>
-  <footer class="p-4 text-center">
-    <span>Powered by: NowNow Digital Systems,
-      <script>
-        document.write(new Date().getFullYear());
-      </script>
-    </span>
-  </footer>
-
-  <!-- Modal -->
-  <div class="modal fade" id="agentModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="agentModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="agentModalLabel" style="font-weight: bold">Super Agent Registration Form</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </section>
+          </article>
         </div>
-        <div class="modal-body">
-          <div class="container">
-            <div class="p-3 border border-2 mb-4">
-              <h5>Super Agent Personal Details</h5>
-            </div>
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">First Name*</label>
-                  <input type="text" class="form-control" placeholder="Enter First Name" required>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Middle Name</label>
-                  <input type="text" class="form-control" placeholder="Enter Middle Name">
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Last Name*</label>
-                  <input type="text" class="form-control" placeholder="Enter Last Name" required>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Phone Number*</label>
-                  <input type="text" class="form-control" placeholder="Enter Phone Number" required>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Alternative Phone Number</label>
-                  <input type="texet" class="form-control" placeholder="Enter Alternative Phone Number">
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Email Address*</label>
-                  <input type="email" class="form-control" placeholder="Enter Email Address" required>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Date of Birth*</label>
-                  <input type="date" class="form-control" placeholder="Enter Date of Birth" required>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Gender</label>
-                  <select class="form-select" aria-label="Default select example" required>
-                    <option selected>Gender</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Landmark*</label>
-                  <input type="text" class="form-control" placeholder="Enter Landmark">
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Province*</label>
-                  <select class="form-select" aria-label="Default select example" required>
-                    <option selected>Province</option>
-                    <option value="Province 1">Province 1</option>
-                    <option value="Province 2">Province 2</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">LGA*</label>
-                  <select class="form-select" aria-label="Default select example" required>
-                    <option selected>LGA</option>
-                    <option value="Some LGA">Some LGA</option>
-                    <option value="Some LGA">Some LGA</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Ward*</label>
-                  <select class="form-select" aria-label="Default select example" required>
-                    <option selected>Ward</option>
-                    <option value="Ward 1">Ward 1</option>
-                    <option value="Ward 2">Ward 2</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label for="exampleFormControlTextarea1" class="form-label">Residential Address</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-              </div>
-            </div>
+      </section>
+    </main>
+    <footer class="p-4 text-center">
+      <span
+        >Powered by: NowNow Digital Systems,
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </span>
+    </footer>
 
-            <div class="p-3 border border-2 mb-4">
-              <h5>Business Details</h5>
-            </div>
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Business Name*</label>
-                  <input type="text" class="form-control" placeholder="Enter Business Name" required>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="agentModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="agentModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5
+              class="modal-title"
+              id="agentModalLabel"
+              style="font-weight: bold"
+            >
+              Super Agent Registration Form
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="p-3 border border-2 mb-4">
+                <h5>Super Agent Personal Details</h5>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">First Name*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter First Name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Middle Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Middle Name"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Last Name*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Last Name"
+                      required
+                    />
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Form ID*</label>
-                  <input type="text" class="form-control" placeholder="Enter Form ID" required>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Phone Number*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Phone Number"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Alternative Phone Number</label>
+                    <input
+                      type="texet"
+                      class="form-control"
+                      placeholder="Enter Alternative Phone Number"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Email Address*</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Enter Email Address"
+                      required
+                    />
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Citizenship</label>
-                  <select class="form-select" aria-label="Default select example" required>
-                    <option selected>Select Citizenship</option>
-                    <option value="Citizenship">Citizenship</option>
-                    <option value="Citizenship">Citizenship</option>
-                  </select>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Date of Birth*</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      placeholder="Enter Date of Birth"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Gender</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option selected>Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Landmark*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Landmark"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Business Province*</label>
-                  <select class="form-select" aria-label="Default select example" required>
-                    <option selected>Province</option>
-                    <option value="Province 1">Province 1</option>
-                    <option value="Province 2">Province 2</option>
-                  </select>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Province*</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option selected>Province</option>
+                      <option value="Province 1">Province 1</option>
+                      <option value="Province 2">Province 2</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">LGA*</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option selected>LGA</option>
+                      <option value="Some LGA">Some LGA</option>
+                      <option value="Some LGA">Some LGA</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Ward*</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option selected>Ward</option>
+                      <option value="Ward 1">Ward 1</option>
+                      <option value="Ward 2">Ward 2</option>
+                    </select>
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Business LGA*</label>
-                  <select class="form-select" aria-label="Default select example" required>
-                    <option selected>LGA</option>
-                    <option value="Some LGA">Some LGA</option>
-                    <option value="Some LGA">Some LGA</option>
-                  </select>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label"
+                      >Residential Address</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="exampleFormControlTextarea1"
+                      rows="3"
+                    ></textarea>
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Business Ward*</label>
-                  <select class="form-select" aria-label="Default select example" required>
-                    <option selected>Ward</option>
-                    <option value="Ward 1">Ward 1</option>
-                    <option value="Ward 2">Ward 2</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Business Registration Number*</label>
-                  <input type="text" class="form-control" placeholder="Enter Business Registration Number" required>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Business Email Address*</label>
-                  <input type="email" class="form-control" placeholder="Enter Business Email Address" required>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Business Location*</label>
-                  <input type="text" class="form-control" placeholder="Enter Business Location" required>
-                </div>
-              </div>
-            </div>
 
-            <div class="p-3 border border-2 mb-4">
-              <h5>Business Bank Account Details</h5>
-            </div>
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">BVN*</label>
-                  <input type="text" class="form-control" placeholder="Enter BVN" required>
+              <div class="p-3 border border-2 mb-4">
+                <h5>Business Details</h5>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Business Name*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Business Name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Form ID*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Form ID"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Citizenship</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option selected>Select Citizenship</option>
+                      <option value="Citizenship">Citizenship</option>
+                      <option value="Citizenship">Citizenship</option>
+                    </select>
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Bank Name*</label>
-                  <select class="form-select" aria-label="Default select example" required>
-                    <option selected>Select Bank Name</option>
-                    <option value="First Bank">First Bank</option>
-                    <option value="GT Bank">GT Bank</option>
-                    <option value="Kuda Bank">Kuda Bank</option>
-                    <option value="Eco Bank">Eco Bank</option>
-                    <option value="Sterling Bank">Sterling Bank</option>
-                    <option value="Fidelity Bank">Fidelity Bank</option>
-                    <option value="Stanbic IBTC Bank">Stanbic IBTC Bank</option>
-                  </select>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Business Province*</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option selected>Province</option>
+                      <option value="Province 1">Province 1</option>
+                      <option value="Province 2">Province 2</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Business LGA*</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option selected>LGA</option>
+                      <option value="Some LGA">Some LGA</option>
+                      <option value="Some LGA">Some LGA</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Business Ward*</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option selected>Ward</option>
+                      <option value="Ward 1">Ward 1</option>
+                      <option value="Ward 2">Ward 2</option>
+                    </select>
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">BIN*</label>
-                  <input type="text" class="form-control" placeholder="Enter BIN" required>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label"
+                      >Business Registration Number*</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Business Registration Number"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Business Email Address*</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Enter Business Email Address"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Business Location*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Business Location"
+                      required
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Bank Account Number*</label>
-                  <input type="text" class="form-control" placeholder="Enter Bank Account Number" required>
+              <div class="p-3 border border-2 mb-4">
+                <h5>Business Bank Account Details</h5>
+              </div>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">BVN*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter BVN"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Bank Name*</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option selected>Select Bank Name</option>
+                      <option value="First Bank">First Bank</option>
+                      <option value="GT Bank">GT Bank</option>
+                      <option value="Kuda Bank">Kuda Bank</option>
+                      <option value="Eco Bank">Eco Bank</option>
+                      <option value="Sterling Bank">Sterling Bank</option>
+                      <option value="Fidelity Bank">Fidelity Bank</option>
+                      <option value="Stanbic IBTC Bank">
+                        Stanbic IBTC Bank
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">BIN*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter BIN"
+                      required
+                    />
+                  </div>
                 </div>
               </div>
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Account Name*</label>
-                  <input type="text" class="form-control" placeholder="Enter Account Name" required>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Nick Name*</label>
-                  <input type="text" class="form-control" placeholder="Enter Nick Name" required>
-                </div>
-              </div>
-            </div>
 
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="mb-3">
-                  <label class="form-label">Account Type*</label>
-                  <select class="form-select" aria-label="Default select example" required>
-                    <option selected>Select Account Type</option>
-                    <option value="Savings">Savings</option>
-                    <option value="Current">Current</option>
-                  </select>
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Bank Account Number*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Bank Account Number"
+                      required
+                    />
+                  </div>
                 </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Account Name*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Account Name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Nick Name*</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Nick Name"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
 
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label">Account Type*</label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option selected>Select Account Type</option>
+                      <option value="Savings">Savings</option>
+                      <option value="Current">Current</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Submit Form</button>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Submit Form</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <!-- CUSTOM JS -->
+    <!-- CUSTOM JS -->
 
-  <script src="../assets/js/jquery.min.js"></script>
-  <script src="../assets/vendors/bootstrap/js/bootstrap.bundle.js"></script>
-  <script src="../assets/vendors/chartjs/chart.min.js"></script>
-  <script src="../assets/vendors/daterangepicker/moment.min.js"></script>
-  <script src="../assets/vendors/daterangepicker/daterangepicker.js"></script>
-  <script src="../assets/vendors/datatables/js/dataTables.min.js"></script>
-  <script src="../assets/vendors/datatables/js/dataTables.button.min.js"></script>
-  <script src="../assets/vendors/datatables/js/jszip.min.js"></script>
-  <script src="../assets/vendors/datatables/js/pdfmake.min.js"></script>
-  <script src="../assets/vendors/datatables/js/vfs_fonts.js"></script>
-  <script src="../assets/vendors/datatables/js/buttons.html5.min.js"></script>
-  <script src="../assets/vendors/datatables/js/buttons.print.min.js"></script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/vendors/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../assets/vendors/chartjs/chart.min.js"></script>
+    <script src="../assets/vendors/daterangepicker/moment.min.js"></script>
+    <script src="../assets/vendors/daterangepicker/daterangepicker.js"></script>
+    <script src="../assets/vendors/datatables/js/dataTables.min.js"></script>
+    <script src="../assets/vendors/datatables/js/dataTables.button.min.js"></script>
+    <script src="../assets/vendors/datatables/js/jszip.min.js"></script>
+    <script src="../assets/vendors/datatables/js/pdfmake.min.js"></script>
+    <script src="../assets/vendors/datatables/js/vfs_fonts.js"></script>
+    <script src="../assets/vendors/datatables/js/buttons.html5.min.js"></script>
+    <script src="../assets/vendors/datatables/js/buttons.print.min.js"></script>
 
-  <!-- CUSTOM IMPORT -->
-  <script src="../assets/js/main.js"></script>
-</body>
-
+    <!-- CUSTOM IMPORT -->
+    <script src="../assets/js/main.js"></script>
+  </body>
 </html>
